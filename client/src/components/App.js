@@ -9,7 +9,7 @@ const App = () => (
   <Router>
     <Switch>
       <>
-        <div className="">
+        <div className="app">
           <Route exact path="/" component={Landing} />
           <Route path="/coach/:id" exact component={ProfileCoach} />
           <Route exact path="/user/trainings" component={ProfileUser} />

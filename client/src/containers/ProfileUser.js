@@ -2,10 +2,10 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import TrainingsCall from '../helpers/APIcalls';
+import {TrainingsCall} from '../helpers/APIcalls';
 
-const ProfileUser = ({ getTrainings, trainings }) => {
-  const { error, pending, trainings} = trainings;
+const ProfileUser = ({ getTrainings, userTrainings }) => {
+  const { error, pending, trainings} = userTrainings;
 
   useEffect(() => {
     getTrainings();
@@ -23,10 +23,18 @@ const ProfileUser = ({ getTrainings, trainings }) => {
   }
 
   return (
+    <div>
+      {trainings.map(training =>{
+        <ul>
+          <li>{training.location}</li>
+        </ul>
+      })}
+    </div>
+  )
 };
 
 ProfileUser.propTypes = {
-  trainings: PropTypes.shape({
+  userTrainings: PropTypes.shape({
     error: PropTypes.string,
     pending: PropTypes.bool,
     trainings: PropTypes.arrayOf(PropTypes.object),
@@ -34,7 +42,7 @@ ProfileUser.propTypes = {
   getTrainings: PropTypes.func.isRequired,
 };
 const mapStateToProps = state => ({
-  trainings: {
+  userTrainings: {
     error: state.trainings.error,
     trainings: state.trainings.trainings,
     pending: state.trainings.pending,
