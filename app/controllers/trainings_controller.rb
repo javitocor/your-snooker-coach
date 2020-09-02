@@ -4,8 +4,8 @@ class TrainingsController < ApplicationController
 
   def index 
     if user_signed_in? 
-    @trainings = current_user.trainings.order("created_at DESC")
-    render json: @trainings
+      @trainings = current_user.trainings.order("created_at DESC")
+      render json: @trainings
     else
       render json: {}, status: 401
     end
@@ -15,7 +15,7 @@ class TrainingsController < ApplicationController
     if user_signed_in? 
       @training = current_user.trainings.build(training_params)
       if @training && @training.save
-        render json: @training
+        render json: @training, status: :create
       else
         render json: { message: @training.errors }, status: 400
       end
@@ -31,7 +31,7 @@ class TrainingsController < ApplicationController
   def update 
     if user_signed_in? 
       if @training.update(training_params)
-        render json: @training
+        render json: @training, status: :update
       else
         render json: { message: @training.errors }, status: 400
       end
