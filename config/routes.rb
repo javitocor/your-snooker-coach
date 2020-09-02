@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end 
   end
 
-  get 'welcome/home', as: 'home'
+  get 'welcome/home'
   get '/app', to: 'welcome#app', as: 'app'
   get '/api/v1/users/:user', :to => 'api/v1/users#show'
   

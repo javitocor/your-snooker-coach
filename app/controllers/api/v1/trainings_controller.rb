@@ -35,6 +35,7 @@ module Api
         if user_signed_in? 
           if @training.update(training_params)
             render json: @training, status: :update
+            head :no_content
           else
             render json: { message: @training.errors }, status: 400
           end
@@ -47,6 +48,7 @@ module Api
         if user_signed_in?
           if @training.destroy
             render json: { message: "Successfully removed item." }, status: 204
+            head :no_content
           else
             render json: { message: "Unable to remove item" }, status: 400
           end
