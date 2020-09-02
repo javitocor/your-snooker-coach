@@ -2,7 +2,11 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 
-const initialState = {};
+const initialState = {
+  pending: true,
+  error: null,
+  data: [],
+};
 
 export default function configureStore() {
   return createStore(
