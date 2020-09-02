@@ -5,4 +5,12 @@ export const GET_PLAYER = 'GET_PLAYER';
 export const GET_PLAYER_ERROR = 'GET_PLAYER_ERROR';
 export const GET_PLAYER_PENDING = 'GET_PLAYER_PENDING';
 
+
+export const initialStatePlayers = {
+  error: null,
+  pending: false,
+  playersList: [],
+  player: [],
+}
+
 export const DEV_URL = 'https://localhost:3000/api/v1';

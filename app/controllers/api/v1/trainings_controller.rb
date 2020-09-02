@@ -1,7 +1,6 @@
 module Api 
   module V1
     class TrainingsController < ApplicationController
-      before_action :authenticate_user!
       before_action :set_provider, only: [:show, :update, :destroy]
 
       def index 
@@ -64,7 +63,7 @@ module Api
       end
 
       def training_params
-        params.require(:training).permit(:location, :date)
+        params.require(:training).permit(:location, :date, :player_id)
       end
 
     end

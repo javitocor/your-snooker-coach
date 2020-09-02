@@ -14,7 +14,7 @@ export const AllPlayersCall = () => async dispatch => {
   }
 };
 
-export const PlayerCall = () => async dispatch => {
+export const PlayerCall = (id) => async dispatch => {
   const Url = DEV_URL;
   try {
       dispatch(getPlayerPending());
