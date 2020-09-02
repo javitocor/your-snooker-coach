@@ -3,16 +3,24 @@ class TrainingsController < ApplicationController
   before_action :set_provider, only: [:show, :update, :destroy]
 
   def index 
-    trainings = Training.order("created_at DESC")
-    render json: training
+    if user_signed_in? 
+    @trainings = current_user.trainings.order("created_at DESC")
+    render json: @trainings
+    else
+      render json: {}, status: 401
+    end
   end
 
   def create 
-    @training = current_user.trainings.build(training_params)
-    if @training && @training.save
-      render json: @training
+    if user_signed_in? 
+      @training = current_user.trainings.build(training_params)
+      if @training && @training.save
+        render json: @training
+      else
+        render json: { message: @training.errors }, status: 400
+      end
     else
-      render json: { message: @training.errors }, status: 400
+      render json: {}, status: 401
     end
   end
 
@@ -21,18 +29,26 @@ class TrainingsController < ApplicationController
   end
 
   def update 
-    if @training.update(training_params)
-      render json: @training
+    if user_signed_in? 
+      if @training.update(training_params)
+        render json: @training
+      else
+        render json: { message: @training.errors }, status: 400
+      end
     else
-      render json: { message: @training.errors }, status: 400
+      render json: {}, status: 401
     end
   end
 
   def destroy 
-    if @training.destroy
-      render json: { message: "Successfully removed item." }, status: 204
+    if user_signed_in?
+      if @training.destroy
+        render json: { message: "Successfully removed item." }, status: 204
+      else
+        render json: { message: "Unable to remove item" }, status: 400
+      end
     else
-      render json: { message: "Unable to remove item" }, status: 400
+      render json: {}, status: 401
     end
   end
 
