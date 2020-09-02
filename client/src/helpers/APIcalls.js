@@ -27,3 +27,40 @@ export const PlayerCall = (id) => async dispatch => {
       dispatch(getPlayerError(error));
   }
 };
+
+export const TrainingsCall = () => async dispatch => {
+  const Url = DEV_URL;
+  try {
+      dispatch(getTrainingsPending());
+
+    const response = await fetch(`${Url}/trainings`, { mode: 'cors' });
+    const trainings = await response.json();
+    dispatch(getTrainings(trainings));
+    return trainings;
+  } catch (error) {
+      dispatch(getTrainingsError(error));
+  }
+};
+
+export const CreateTrainingsCall = (token, data) => async dispatch => {
+  const Url = DEV_URL;
+  try {
+      dispatch(createTrainingPending());
+
+    const response = await fetch(`${Url}/trainings`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+      redirect: "error",
+      body: JSON.stringify(data)
+    })
+    const training = await response.json();
+    dispatch(createTraining(training));
+    return trainings;
+  } catch (error) {
+      dispatch(createTrainingError(error));
+  }
+};

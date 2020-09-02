@@ -2,35 +2,47 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import season from '../style/Seasons.module.css';
-import showName from '../helpers/showName';
-import callAPI from '../helpers/API';
+import TrainingsCall from '../helpers/APIcalls';
 
-const ProfileUser = ({ seasons, getSeasons, location }) => {
+const ProfileUser = ({ getTrainings, trainings }) => {
+  const { error, pending, trainings} = trainings;
 
+  useEffect(() => {
+    getTrainings();
+  }, []);
+
+  if (error) {
+    return (
+      <div>{error}</div>
+    );
+  }
+  if (pending) {
+    return (
+      <div className="">...Loading...</div>
+    );
+  }
+
+  return (
 };
 
 ProfileUser.propTypes = {
-  location: PropTypes.shape({
-    state: PropTypes.shape({ show: PropTypes.string.isRequired }),
-  }).isRequired,
-  seasons: PropTypes.shape({
+  trainings: PropTypes.shape({
     error: PropTypes.string,
     pending: PropTypes.bool,
-    data: PropTypes.arrayOf(PropTypes.object),
+    trainings: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
-  getSeasons: PropTypes.func.isRequired,
+  getTrainings: PropTypes.func.isRequired,
 };
 const mapStateToProps = state => ({
-  seasons: {
-    error: state.seasons.error,
-    data: state.seasons.data,
-    pending: state.seasons.pending,
+  trainings: {
+    error: state.trainings.error,
+    trainings: state.trainings.trainings,
+    pending: state.trainings.pending,
   },
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  getSeasons: callAPI,
+  getTrainings: TrainingsCall,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileUser);
