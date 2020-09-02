@@ -7,7 +7,7 @@ export const AllPlayersCall = () => async dispatch => {
 
     const response = await fetch(`${Url}/players`, { mode: 'cors' });
     const playersList = await response.json();
-    dispatch(getAllPlayers(playerList));
+    dispatch(getAllPlayers(playersList));
     return playersList;
   } catch (error) {
       dispatch(getAllPlayersError(error));

@@ -1,8 +1,8 @@
 import { GET_ALL_PLAYERS, GET_ALL_PLAYERS_ERROR, GET_ALL_PLAYERS_PENDING, GET_PLAYER, GET_PLAYER_ERROR, GET_PLAYER_PENDING } from '../helpers/constants';
 
-export const getAllPlayers = (playerList) => ({
+export const getAllPlayers = (playersList) => ({
   type: GET_ALL_PLAYERS,
-  playerList
+  playersList
 });
 
 export const getAllPlayersPending = () => ({

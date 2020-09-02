@@ -7,7 +7,7 @@ const coachReducer = (state = {}, action) => {
       return {
         ...state,
         pending: false,
-        playerList: action.playerList,
+        playersList: action.playersList,
       };
     case GET_ALL_PLAYERS_PENDING:
       return {
