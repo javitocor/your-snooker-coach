@@ -22,3 +22,10 @@ export const CREATE_TRAINING = 'CREATE_TRAINING';
 export const CREATE_TRAINING_PENDING = 'CREATE_TRAINING_PENDING';
 export const CREATE_TRAINING_ERROR = 'CREATE_TRAINING_ERROR';
 
+export const initialStateTrainings = {
+  error: null,
+  pending: false,
+  trainings: [],
+  training: [],
+}
+
