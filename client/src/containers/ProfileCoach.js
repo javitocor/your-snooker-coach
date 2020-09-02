@@ -26,6 +26,9 @@ class ProfileCoach extends React.Component {
             <li>{coach.player.firstseason}</li>
             <li>{coach.player.info}</li>
         </ul>
+        <Link to="/user/trainings" className="btn btn-secondary mt-3">
+            User Profile
+          </Link>
       </div>     
     );
   }

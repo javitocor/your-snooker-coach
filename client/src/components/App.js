@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from '../containers/Landing';
 import ProfileCoach from '../containers/ProfileCoach';
-import ProfileUser from '';
+import ProfileUser from '../containers/ProfileUser';
 
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
         <div className="">
           <Route exact path="/" component={Landing} />
           <Route path="/coach/:id" exact component={ProfileCoach} />
-          <Route exact path="/trainings" component={ProfileUser} />
+          <Route exact path="/user/trainings" component={ProfileUser} />
         </div>
       </>
     </Switch>

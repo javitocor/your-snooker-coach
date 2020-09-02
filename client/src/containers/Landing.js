@@ -15,23 +15,25 @@ class Landing extends React.Component {
     const { coach } = this.props;   
     return ( 
       <div>
-        <ul>
+        
           {coach.playersList.map(player => {
-            <li>{player.name}</li>
-            <li><Link
-            key={player.id}
-            to={{
-              pathname: `/coach/${player.id}`,
-              state: {
-                playerId: player.id,
-              },
-            }}
-            className="btn btn-secondary"
-          >
-            Go to Coach Profile
-          </Link></li>
+            <ul>
+              <li>{player.name}</li>
+              <li><Link
+              key={player.id}
+              to={{
+                pathname: `/coach/${player.id}`,
+                state: {
+                  playerId: player.id,
+                },
+              }}
+              className="btn btn-secondary"
+              >
+                Go to Coach Profile
+              </Link></li>
+            </ul>
           })}
-        </ul>
+        
       </div>     
     );
   }
