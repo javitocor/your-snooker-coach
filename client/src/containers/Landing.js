@@ -43,7 +43,7 @@ class Landing extends React.Component {
 
 Landing.propTypes = {  
   coach: PropTypes.shape({
-    error: PropTypes.string,
+    error: PropTypes.object,
     pending: PropTypes.bool,
     playersList: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,

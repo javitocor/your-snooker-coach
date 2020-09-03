@@ -7,12 +7,7 @@ export const AllPlayersCall = (token) => async dispatch => {
   try {
       dispatch(getAllPlayersPending());
 
-    const response = await fetch(`${Url}/players`, {
-      method: 'GET',
-      headers: {
-        'X-CSRF-Token': token
-      }
-    });
+    const response = await fetch(`${Url}/players`, { mode: 'cors' });
     const playersList = await response.json();
     dispatch(getAllPlayers(playersList));
     return playersList;

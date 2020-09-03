@@ -3,12 +3,12 @@ module Api
     class PlayersController < ApplicationController
 
       def index 
-        if user_signed_in?
+        ##if user_signed_in?
           @players = Player.all
           render json: @players
-        else 
-          render json: {}, status: 401
-        end
+        ##else 
+          ##render json: {}, status: 401
+        ##end
       end
 
       def create 
@@ -26,7 +26,7 @@ module Api
 
       def show 
         if user_signed_in?
-          @player = Training.find(params[:id])
+          @player = Player.find(params[:id])
           render json: @player
         else 
           render json: {}, status: 401
