@@ -8,7 +8,6 @@ export const AllPlayersCall = (token) => async dispatch => {
   try {
       dispatch(getAllPlayersPending());
 
-    /*const response = await fetch(`${Url}/players`, { mode: 'cors' });*/
     const response = await fetch(`${Url}players`, { mode: 'cors' });
     /*const response = await axios.get(`http://localhost:3000/api/v1/players`);*/
     const playersList = await response.json();
