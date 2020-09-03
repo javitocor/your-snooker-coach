@@ -112,8 +112,7 @@ align-content: center;
 
 .card{
 height: 370px;
-margin-top: auto;
-margin-bottom: auto;
+margin: 5rem auto !important;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
@@ -174,6 +173,17 @@ width: 100px;
 color: black;
 background-color: white;
 }
+
+.login_btn2{
+  color: black !important;
+  background-color: #FFC312 !important;
+  width: 200px;
+  }
+  
+  .login_btn2:hover{
+  color: black;
+  background-color: white;
+  }
 
 .links{
 color: white;
