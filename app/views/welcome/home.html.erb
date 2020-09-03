@@ -1,10 +1,22 @@
-<nav style="text-align: right">
-  <% if user_signed_in? %>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>          
-  <% else %>
-    <%= link_to('Login', new_user_session_path)  %> |
-    <%= link_to('Sign Up', new_user_registration_path)  %>  
-  <% end %>
-</nav>
-<h1>Get Your Snooker Coach</h1>
-<p>If you're logged in, check out <%= link_to "the app", app_path %>!</p>
+<section class="hero">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="index.html" title="Home"><img alt="" src=""></a>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h1>
+          Get Your Snooker Coach
+        </h1>
+
+        <p class="tagline">
+          Train with the best professional players and become one of them.
+        </p>
+        <a class="btn2" href="#about">Get Started Now</a>
+        <p class="text-muted mt-4">If you're logged in, check out <%= link_to "the app", app_path %>!</p>
+      </div>
+    </div>
+
+  </section>
