@@ -2,6 +2,7 @@ module Api
   module V1
     class TrainingsController < ApplicationController
       before_action :set_provider, only: [:show, :update, :destroy]
+      before_action :authenticate_user!
 
       def index 
         if user_signed_in? 
