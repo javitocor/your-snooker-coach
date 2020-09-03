@@ -14,7 +14,8 @@ class ProfileCoach extends React.Component {
   }
 
   render() { 
-    const { coach } = this.props;   
+    const { coach } = this.props; 
+    console.log(coach.player);
     return ( 
       <div>
         <ul>
@@ -36,12 +37,12 @@ class ProfileCoach extends React.Component {
 
 ProfileCoach.propTypes = {  
   location: PropTypes.shape({
-    state: PropTypes.shape({ playerId: PropTypes.string.isRequired }),
+    state: PropTypes.shape({ playerId: PropTypes.number.isRequired }),
   }).isRequired,
   coach: PropTypes.shape({
     error: PropTypes.string,
     pending: PropTypes.bool,
-    player: PropTypes.arrayOf(PropTypes.object),
+    player: PropTypes.object,
   }).isRequired,
   getPlayer: PropTypes.func.isRequired,
 };

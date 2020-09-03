@@ -19,7 +19,7 @@ module Api
           if @training && @training.save
             render json: @training, status: :created
           else
-            render json: { message: @training.errors }, status: 400
+            render json: { message: @training.errors.full_messages }, status: 400
           end
         else
           render json: {}, status: 401
@@ -46,10 +46,10 @@ module Api
       def destroy 
         if user_signed_in?
           if @training.destroy
-            render json: { message: "Successfully removed item." }, status: 204
+            render json: { message: "Successfully removed training." }, status: 204
             head :no_content
           else
-            render json: { message: "Unable to remove item" }, status: 400
+            render json: { message: "Unable to remove training" }, status: 400
           end
         else
           render json: {}, status: 401
@@ -59,7 +59,7 @@ module Api
       private 
 
       def set_provider
-        @training = Training.find_by(params[:id])
+        @training = Training.find(params[:id])
       end
 
       def training_params

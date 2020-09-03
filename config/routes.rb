@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'welcome/home'
   get '/app', to: 'welcome#app', as: 'app'
-  get '/api/v1/users/:user', :to => 'api/v1/users#show'
+  get '/api/v1/users/:id', :to => 'api/v1/users#show'
   get '/api/v1/players', :to => 'api/v1/players#index'
   
   root 'welcome#home'

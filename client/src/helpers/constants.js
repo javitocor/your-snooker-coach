@@ -1,4 +1,4 @@
-export const DEV_URL = 'https://localhost:3000/api/v1';
+export const DEV_URL = 'http://localhost:3000/api/v1/';
 
 export const GET_ALL_PLAYERS = 'GET_ALL_PLAYERS';
 export const GET_ALL_PLAYERS_ERROR = 'GET__PLAYERS_ERROR';
@@ -12,7 +12,7 @@ export const initialStatePlayers = {
   error: null,
   pending: false,
   playersList: [],
-  player: [],
+  player: {},
 }
 
 export const GET_TRAININGS = 'GET_TRAININGS';

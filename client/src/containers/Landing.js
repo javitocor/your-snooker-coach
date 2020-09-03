@@ -13,12 +13,13 @@ class Landing extends React.Component {
   }
 
   render() { 
-    const { coach } = this.props;  
-    console.log(coach);
+    const { coach } = this.props;
+    const { playersList } = coach;
+    console.log(playersList);
     return ( 
       <div>
-        <p>dfdfdfgfdgfdgfgfdgfgfd</p>
-          {coach.playersList.map(player => {
+        <div>
+          {playersList.map(player => (
             <ul>
               <li>{player.name}</li>
               <li><Link
@@ -34,8 +35,8 @@ class Landing extends React.Component {
                 Go to Coach Profile
               </Link></li>
             </ul>
-          })}
-        
+          ))}
+        </div>
       </div>     
     );
   }
