@@ -17,7 +17,7 @@ module Api
           if @player && @player.save
             render json: @player, status: :create
           else
-            render json: { message: @player.errors }, status: 400
+            render json: { message: @player.errors.full_messages }, status: 400
           end
         else
           render json: {}, status: 401
@@ -26,7 +26,7 @@ module Api
 
       def show 
         if user_signed_in?
-          @player = Training.find_by(params[:id])
+          @player = Training.find(params[:id])
           render json: @player
         else 
           render json: {}, status: 401

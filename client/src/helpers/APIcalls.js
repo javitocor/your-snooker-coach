@@ -1,11 +1,18 @@
 import { DEV_URL } from './constants';
+import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError} from '../actions/coach';
+import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError }from '../actions/trainings'
 
-export const AllPlayersCall = () => async dispatch => {
+export const AllPlayersCall = (token) => async dispatch => {
   const Url = DEV_URL;
   try {
       dispatch(getAllPlayersPending());
 
-    const response = await fetch(`${Url}/players`, { mode: 'cors' });
+    const response = await fetch(`${Url}/players`, {
+      method: 'GET',
+      headers: {
+        'X-CSRF-Token': token
+      }
+    });
     const playersList = await response.json();
     dispatch(getAllPlayers(playersList));
     return playersList;

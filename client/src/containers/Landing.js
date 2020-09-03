@@ -7,15 +7,17 @@ import { AllPlayersCall } from '../helpers/APIcalls';
 
 class Landing extends React.Component {
   componentDidMount() {
+    let token = document.querySelector('meta[name="csrf-token"]').content;
     const { getAllPlayers } = this.props;
-    getAllPlayers();
+    getAllPlayers(token);
   }
 
   render() { 
-    const { coach } = this.props;   
+    const { coach } = this.props;  
+    console.log(coach);
     return ( 
       <div>
-        
+        <p>dfdfdfgfdgfdgfgfdgfgfd</p>
           {coach.playersList.map(player => {
             <ul>
               <li>{player.name}</li>

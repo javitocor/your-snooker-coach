@@ -33,10 +33,10 @@ module Api
       def update 
         if user_signed_in? 
           if @training.update(training_params)
-            render json: @training, status: :update
+            render json: @training, status: :ok
             head :no_content
           else
-            render json: { message: @training.errors }, status: 400
+            render json: { message: @training.errors.full_messages }, status: 400
           end
         else
           render json: {}, status: 401

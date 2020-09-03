@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from '../containers/Landing';
 import ProfileCoach from '../containers/ProfileCoach';
 import ProfileUser from '../containers/ProfileUser';
@@ -11,7 +11,7 @@ const App = () => (
       <>
         <div className="app">
           <Route exact path="/" component={Landing} />
-          <Route path="/coach/:id" exact component={ProfileCoach} />
+          <Route exact path="/coach/:id" component={ProfileCoach} />
           <Route exact path="/user/trainings" component={ProfileUser} />
         </div>
       </>
