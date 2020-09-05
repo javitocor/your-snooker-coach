@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../style/Table.css';
 
 const Table = props => {
-  const { player } = this.props;
+  const { player } = props;
   return (
     <div className="table-responsive my-sm-2 mt-3 bg-light border border-dark">
       <div className=" text-right pr-2 black m-0 pt-1">
