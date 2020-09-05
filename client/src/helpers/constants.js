@@ -29,3 +29,18 @@ export const initialStateTrainings = {
   training: [],
 }
 
+export const locations = [
+  'The Crucible Theatre, Sheffield, EN',
+  'York Barbican, York, EN',
+  'Alexandra Palace, London, EN',
+  'Marshall Arena, Milton Keynes, EN',
+  'Cheltenham Racecourse, Cheltenham, EN',
+  'Yushan Sport Centre, Yushan, CH',
+  'Motorpoint Arena, Cardiff, SCO',
+  'Haikou Stadium, CH',
+  'Blackpool Tower, Blackpool, EN',
+  'Beijing University, Beijing, CH',
+  'Venue Cymru, Llandudno, WAL',
+  'Grand Hyatt Mumbai, Mumbai, IND'
+];
+

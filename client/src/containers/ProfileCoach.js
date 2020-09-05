@@ -87,7 +87,7 @@ class ProfileCoach extends React.Component {
                               </div>
                           </div>
                         </div>
-                        <button className="btn btn-success bWidth" type="submit">Apply for training</button>
+                        <button className="btn btn-success bWidth" type="submit">Confirm your training</button>
                       </form>
                     </div>
                     <div className="modal-footer">
