@@ -1,5 +1,5 @@
 # README
-
+<!--
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -26,7 +26,7 @@ Things you may want to c<!--
 
 # Your Snooker Coach
 
->  A webApp that allows you to book trainings with world class snooker players. Built with Ruby on Rails, React and Redux.
+>  A webApp that allows the user to book trainings with world class snooker players. Built with Ruby on Rails, React and Redux.
 
 You can find the description of the project [here](https://www.notion.so/Final-Capstone-Project-Book-an-Appointment-41ded2ee99ff4fe4becf91acb332ca26) ("Catalogue of Statistics")
 
@@ -66,14 +66,14 @@ Additional description about the project and its features.
 
 ### Usage
 To have this app on your pc, you need to:
-* [download](https://github.com/javitocor/Trekkie-World-Catalog/archive/development.zip) or clone this repo:
+* [download](https://github.com/javitocor/your-snooker-coach/archive/development.zip) or clone this repo:
   - Clone with SSH:
   ```
-    git@github.com:javitocor/Trekkie-World-Catalog.git
+    git@github.com:javitocor/your-snooker-coach.git
   ```
   - Clone with HTTPS
   ```
-    https://github.com/javitocor/Trekkie-World-Catalog.git
+    https://github.com/javitocor/your-snooker-coach.git
   ```
 
 * In the project directory, you can run:
@@ -104,6 +104,8 @@ To have this app on your pc, you need to:
 - Add more locations.
 - Add more players.
 - Add extra UI.
+- Add statistics
+- Add call to external API
 
 ## Author
 
@@ -116,7 +118,7 @@ To have this app on your pc, you need to:
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/javitocor/Trekkie-World-Catalog/issues).
+Feel free to check the [issues page](https://github.com/javitocor/your-snooker-coach/issues).
 
 ## Show your support
 
@@ -129,6 +131,8 @@ Give a ⭐️ if you like this project!
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Heroku Documentation](https://devcenter.heroku.com/)
 - [Redux](https://redux.js.org/)
+- [World Snooker](https://wst.tv/)
+- [Snooker API](http://api.snooker.org/)
 
 ## 📝 License
 
@@ -136,12 +140,12 @@ This project is [MIT](lic.url) licensed.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/javitocor/Trekkie-World-Catalog.svg?style=flat-square
-[contributors-url]: https://github.com/javitocor/Trekkie-World-Catalog/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/javitocor/Trekkie-World-Catalog.svg?style=flat-square
-[forks-url]: https://github.com/javitocor/Trekkie-World-Catalog/network/members
-[stars-shield]: https://img.shields.io/github/stars/javitocor/Trekkie-World-Catalog.svg?style=flat-square
-[stars-url]: https://github.com/javitocor/Trekkie-World-Catalog/stargazers
-[issues-shield]: https://img.shields.io/github/issues/javitocor/Trekkie-World-Catalog.svg?style=flat-square
-[issues-url]: https://github.com/javitocor/Trekkie-World-Catalog/issuesover:
+[contributors-shield]: https://img.shields.io/github/contributors/javitocor/your-snooker-coach.svg?style=flat-square
+[contributors-url]: https://github.com/javitocor/your-snooker-coach/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/javitocor/your-snooker-coach.svg?style=flat-square
+[forks-url]: https://github.com/javitocor/your-snooker-coach/network/members
+[stars-shield]: https://img.shields.io/github/stars/javitocor/your-snooker-coach.svg?style=flat-square
+[stars-url]: https://github.com/javitocor/your-snooker-coach/stargazers
+[issues-shield]: https://img.shields.io/github/issues/javitocor/your-snooker-coach.svg?style=flat-square
+[issues-url]: https://github.com/javitocor/your-snooker-coach/issuesover:
 
