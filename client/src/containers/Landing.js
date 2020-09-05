@@ -18,14 +18,14 @@ class Landing extends React.Component {
     const { coach } = this.props;
     const { playersList } = coach;
     return ( 
-      <div className="col-md-10 col-sm-12 p-3">
-        <div className="d-flex align-items-centerjustify-content-start text-success ml-2">
-          <h3><u>HOME</u></h3>
+      <div className="col-md-10 col-sm-12 p-3 content">
+        <div className="d-flex align-items-center justify-content-start text-success ml-1">
+          <h3 className="title"><u>HOME</u></h3>
         </div>
-        <div className="text-center ">
+        <div className="text-center">
           <h3 className="text-white bg-success w-50 m-auto rounded p-2 border border-dark d-flex justify-content-around">
             Select Your Coach<small className="mt-2"><i className="fas fa-chevron-down"></i></small></h3>
-          <span className="tex-mute text-white-50">Select over Top-Class Professional Players</span>
+          <span className="tex-mute text-success">Select over Top-Class Professional Players</span>
         </div>
         <div className="jumbotron bg-success p-4 mt-5">
           <Carousel key={playersList} playerslist={playersList} />
