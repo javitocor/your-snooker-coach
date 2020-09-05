@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Select from './Select';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Modal extends React.Component {
     this.state = {
       location: '',
       date: '',
-      player: player.id
+      player_id: player.id
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -31,7 +32,7 @@ class Modal extends React.Component {
     this.setState({
       date: '',
       location: '',
-      playerId: player.id,
+      player_id: player.id,
     });
   }
 
@@ -63,11 +64,7 @@ class Modal extends React.Component {
                   <div className="form-group row">
                     <label for="example-select" className="col-2 col-form-label">Location</label>
                     <div className="col-10">
-                      <select multiple name="location" value={this.state.location} onChange={this.handleChange} className="custom-select bg-secondary" id="example-select">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                      <Select location={this.state.location} handleChange={this.handleChange}/>                      
                     </div>
                   </div>
                   <div className="form-group row">
