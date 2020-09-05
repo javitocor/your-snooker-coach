@@ -34,8 +34,17 @@ You can find the description of the project [here](https://www.notion.so/Final-C
 Landing Page:
 ![screenshot](./src/assets/screenshot.png)
 
-Episodes Page: 
+Login Page: 
 ![screenshot](./src/assets/screenshot1.png)
+
+App Landing Page: 
+![screenshot](./src/assets/screenshot1.png)
+
+Player Profile: 
+![screenshot](./src/assets/screenshot1.png)
+
+User Profile: 
+![screenshot](./src/assets/screenshot1.png) 
 
 Additional description about the project and its features.
 
