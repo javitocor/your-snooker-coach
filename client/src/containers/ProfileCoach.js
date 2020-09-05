@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import Table from '../components/Table';
 import Donut from '../components/Donut';
 import Modal from '../components/Modal';
-import { PlayerCall } from '../helpers/APIcalls';
+import { PlayerCall, CreateTrainingsCall } from '../helpers/APIcalls';
 
 class ProfileCoach extends React.Component {
   componentDidMount() {
@@ -15,8 +15,10 @@ class ProfileCoach extends React.Component {
     getPlayer(playerId);
   }
 
-  addTrainning() {
-
+  addTraining(data) {
+    const { postTraining } = this.props;
+    const token = document.querySelector('meta[name="csrf-token"]').content;
+    postTraining(token, data);
   }
 
   render() {
@@ -48,7 +50,7 @@ class ProfileCoach extends React.Component {
           <div className="col-md-4 col-sm-12 d-flex flex-column">
             <Table key={player} player={player} />
             <Donut />
-            <Modal player={player} addTrainning={this.addTrainning} />            
+            <Modal player={player} addTraining={this.addTraining} />            
           </div>
         </div>
       </div>
@@ -66,6 +68,7 @@ ProfileCoach.propTypes = {
     player: PropTypes.object,
   }).isRequired,
   getPlayer: PropTypes.func.isRequired,
+  postTraining: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -78,6 +81,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   getPlayer: PlayerCall,
+  postTraining: CreateTrainingsCall,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileCoach);
