@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import { AllPlayersCall } from '../helpers/APIcalls';
+import Carousel from '../components/Carousel';
 import '../style/Landing.css';
 
 class Landing extends React.Component {
@@ -24,7 +25,7 @@ class Landing extends React.Component {
         <div className="text-center ">
           <h3 className="text-white bg-success w-50 m-auto rounded p-2 border border-dark d-flex justify-content-around">
             Select Your Coach<small className="mt-2"><i className="fas fa-chevron-down"></i></small></h3>
-          <span className="tex-mute text-white-50">Select over top-className professional players</span>
+          <span className="tex-mute text-white-50">Select over Top-Class Professional Players</span>
         </div>
         <div className="jumbotron bg-success p-4 mt-5">
           <Carousel key={playersList} playerslist={playersList} />
@@ -60,15 +61,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Landing);
 
 
 
-<Link
-              key={player.id}
-              to={{
-                pathname: `/coach/${player.id}`,
-                state: {
-                  playerId: player.id,
-                },
-              }}
-              classNameName="btn btn-secondary"
-              >
-                Go to Coach Profile
-              </Link>   
+  
