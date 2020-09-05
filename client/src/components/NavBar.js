@@ -17,8 +17,8 @@ const NavBar = () => (
           PROFILE
         </Link>
 
-        <a className="list-group-item list-group-item-action list-group-item-success" id="list-messages-list"
-          data-toggle="list" href="#" role="tab" aria-controls="messages">SHOP</a>
+        <a className="list-group-item list-group-item-action list-group-item-success" id="list-shop-list"
+          data-toggle="list" href="#" role="tab" aria-controls="shop">SHOP</a>
 
         <Link to="/about" className="list-group-item list-group-item-action list-group-item-success" id="list-about-list"
           data-toggle="list" role="tab" aria-controls="about">
