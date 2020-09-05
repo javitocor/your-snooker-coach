@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
+import Table from '../components/Table';
 import { PlayerCall } from '../helpers/APIcalls';
 
 class ProfileCoach extends React.Component {
@@ -42,70 +42,41 @@ class ProfileCoach extends React.Component {
 
           </div>
           <div className="col-md-4 col-sm-12 d-flex flex-column">
-            <div className="table-responsive my-sm-2 mt-3 bg-light border border-dark">
-              <div className=" text-right pr-2 black m-0 pt-1">
-                <h4 className="text-right mb-0 mt-3 text-success">Coach Info</h4>
-                <small className="text-right text-muted">Everything you need to know</small>
-              </div>
-              <table className="table table-hover table-bordered table-striped mb-0">
-                <tbody>
-                  <tr className="">
-                    <th className="text-center bg-success"><i className="far fa-clock"></i></th>
-                    <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> D.O.B:</p> <p className="m-0 text-dark">{player.born}</p></th>
-                  </tr>
-                  <tr className="">
-                    <th className="text-center bg-success"><i className="fas fa-globe-europe"></i></th>
-                    <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Nationality:</p> <p className="m-0 text-dark">{player.nationality}</p></th>
-                  </tr>
-                  <tr className="">
-                    <th className="text-center bg-success"><i className="far fa-star"></i></th>
-                    <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Turned Pro:</p> <p className="m-0 text-dark">{player.firstseason}</p></th>
-                  </tr>
-                  <tr className="">
-                    <th className="text-center bg-success"><i className="fas fa-trophy"></i></th>
-                    <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Ranking:</p> <p className="m-0 text-dark">{player.ranking}</p></th>
-                  </tr>
-                  <tr className="">
-                    <th className="text-center bg-success"><i className="fas fa-dollar-sign"></i></th>
-                    <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark">   Rate:</p> <p className="m-0 text-dark">{player.rate}</p></th>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <Table key={player} player={player} />
 
             <div className="donut-chart-block block">
               <h2 className="titular text-success">Player Specs</h2>
               <div className="donut-chart">
                 <div id="porcion1" className="recorte">
-                  <div className="quesito ios" data-rel="21"></div>
+                  <div className="quesito ment" data-rel="21"></div>
                 </div>
                 <div id="porcion2" className="recorte">
-                  <div className="quesito mac" data-rel="39"></div>
+                  <div className="quesito acc" data-rel="39"></div>
                 </div>
                 <div id="porcion3" className="recorte">
-                  <div className="quesito win" data-rel="31"></div>
+                  <div className="quesito def" data-rel="31"></div>
                 </div>
                 <div id="porcionFin" className="recorte">
-                  <div className="quesito linux" data-rel="9"></div>
+                  <div className="quesito att" data-rel="9"></div>
                 </div>
                 <p className="center-date"><br /><span className="scnd-font-color"></span></p>
               </div>
               <div className="values">
                 <ul className="os-percentages horizontal-list">
                   <li>
-                    <p className="ios os scnd-font-color">Mental</p>
+                    <p className="ment os scnd-font-color">Mental</p>
                     <p className="os-percentage">21%</p>
                   </li>
                   <li>
-                    <p className="mac os scnd-font-color">Accuracy</p>
+                    <p className="acc os scnd-font-color">Accuracy</p>
                     <p className="os-percentage">39%</p>
                   </li>
                   <li>
-                    <p className="linux os scnd-font-color">Attack</p>
+                    <p className="att os scnd-font-color">Attack</p>
                     <p className="os-percentage">9%</p>
                   </li>
                   <li>
-                    <p className="win os scnd-font-color">Defense</p>
+                    <p className="def os scnd-font-color">Defense</p>
                     <p className="os-percentage">31%</p>
                   </li>
                 </ul>
