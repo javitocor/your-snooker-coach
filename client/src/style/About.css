@@ -23,3 +23,11 @@
   -ms-filter: blur(8px);
   filter: blur(8px);*/
 }
+
+.content2 {
+  background-image: url('https://ak.picdn.net/shutterstock/videos/6548744/thumb/1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #464646;
+}
