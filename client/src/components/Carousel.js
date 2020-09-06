@@ -1,28 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel'
 import CarouselItem from './CarouselItem';
 import '../style/Carousel.css';
 
-const Carousel = props => {
+const Carousel1 = props => {
   const { playerslist } = props;
   return (
-    <div id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel">
-      <div className="carousel-inner">
-        {playerslist.map((player, index) => (
+    <Carousel id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel" interval={2000} >
+      {playerslist.map((player, index) => (
+        <Carousel.Item>
           <CarouselItem index={index} player={player} />
-        ))}
-      </div>
-      <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
-        className="carousel-control-prev-icon" aria-hidden="true"></span> <span className="sr-only">Previous</span> </a>
-      <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
-        className="carousel-control-next-icon" aria-hidden="true"></span> <span className="sr-only">Next</span> </a>
-    </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   )
 };
 
-Carousel.propTypes = {
+Carousel1.propTypes = {
   playerslist: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default Carousel;
+export default Carousel1;

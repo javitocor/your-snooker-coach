@@ -6,7 +6,7 @@ import '../style/CarouselItem.css';
 const CarouselItem = props => {
   const {index, player} = props;
   return (
-    <div key={index} className="carousel-item active">
+    <div key={index}>
             <div className="mask flex-center">
               <div className="container">
                 <div className="row align-items-center">

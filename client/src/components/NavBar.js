@@ -9,7 +9,7 @@ const NavBar = () => (
       </div>
       <div className="list-group" id="list-tab" role="tablist">
         <Link to="/" className="list-group-item list-group-item-action active list-group-item-success" id="list-home-list"
-          data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+          data-toggle="list" role="tab" aria-controls="home">
           HOME
         </Link>
         <Link to="/user/trainings" className="list-group-item list-group-item-action list-group-item-success" id="list-profile-list"
@@ -18,7 +18,7 @@ const NavBar = () => (
         </Link>
 
         <a className="list-group-item list-group-item-action list-group-item-success" id="list-shop-list"
-          data-toggle="list" href="#" role="tab" aria-controls="shop">SHOP</a>
+          data-toggle="list" role="tab" aria-controls="shop">SHOP</a>
 
         <Link to="/about" className="list-group-item list-group-item-action list-group-item-success" id="list-about-list"
           data-toggle="list" role="tab" aria-controls="about">

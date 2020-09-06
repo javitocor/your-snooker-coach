@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { AllPlayersCall } from '../helpers/APIcalls';
-import Carousel from '../components/Carousel';
+import Carousel1 from '../components/Carousel';
 import Spinner from 'react-bootstrap/Spinner';
 import '../style/Landing.css';
 
@@ -28,7 +28,7 @@ class Landing extends React.Component {
           <span className="tex-mute text-success">Select over Top-Class Professional Players</span>
         </div>
         <div className="jumbotron bg-success p-4 mt-5">
-          <Carousel key={playersList} playerslist={playersList} />
+          <Carousel1 key={playersList} playerslist={playersList} />
         </div>
       </div>
     );
