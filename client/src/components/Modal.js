@@ -62,13 +62,13 @@ class Modal extends React.Component {
               <div className="modal-body bg-secondary">
                 <form onSubmit={this.onSubmit} className="needs-validation" novalidate>
                   <div className="form-group row">
-                    <label for="example-select" className="col-2 col-form-label">Location</label>
+                    <label htmlFor="example-select" className="col-2 col-form-label">Location</label>
                     <div className="col-10">
                       <Select location={this.state.location} handleChange={this.handleChange}/>                      
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label for="validationCustomt" className="col-2 col-form-label">Date</label>
+                    <label htmlFor="validationCustomt" className="col-2 col-form-label">Date</label>
                     <div className="col-10">
                       <input name="date" className="form-control bg-secondary" type="date" value={this.state.date} onChange={this.handleChange} id="validationCustom" />
                       <div className="valid-feedback">

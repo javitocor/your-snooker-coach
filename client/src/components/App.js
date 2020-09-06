@@ -11,8 +11,8 @@ const App = () => (
   <Router>
     <Switch>
       <>
-        <div class=" p-3 mt-3 mb-3">
-          <div class="row d-sm-flex flex-sm-column d-md-flex flex-md-row">
+        <div className=" p-3 mt-3 mb-3">
+          <div className="row d-sm-flex flex-sm-column d-md-flex flex-md-row">
             <Route path="/" component={NavBar} />
             <Route exact path="/" component={Landing} />
             <Route exact path="/coach/:id" component={ProfileCoach} />
