@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/About.css';
 
 const About = () => (
-  <main className="col-md-10 col-sm-12 p-3 content">
+  <main className="col-md-10 col-sm-12 p-3 content mt-3">
     <div className="jumbotron content2 mt-4">
       <div className="container">
         <h1 className="display-3">Xin Chào, Snooker Lovers</h1>

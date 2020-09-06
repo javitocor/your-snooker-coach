@@ -31,3 +31,7 @@
   background-repeat: no-repeat;
   background-color: #464646;
 }
+
+main {
+  overflow-y: hidden !important;
+}

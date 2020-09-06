@@ -121,13 +121,13 @@ animation-name: fadeInLeft;
 from {
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(82%, 100%, 0);
 }
 
 to {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 75%, 0);
+  transform: translate3d(82%, 85%, 0);
 }
 }
 
@@ -135,13 +135,13 @@ to {
 from {
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(82%, 100%, 0);
 }
 
 to {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 75%, 0);
+  transform: translate3d(82%, 85%, 0);
 }
 }
 
