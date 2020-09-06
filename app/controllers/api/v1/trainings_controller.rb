@@ -2,15 +2,15 @@ module Api
   module V1
     class TrainingsController < ApplicationController
       before_action :set_provider, only: [:show, :update, :destroy]
-      before_action :authenticate_user!
+      ##before_action :authenticate_user!
 
       def index 
-        if user_signed_in? 
+        ##if user_signed_in? 
           @trainings = current_user.trainings.order("created_at DESC")
           render json: @trainings
-        else
-          render json: {}, status: 401
-        end
+        ##else
+          ##render json: {}, status: 401
+        ##end
       end
 
       def create 

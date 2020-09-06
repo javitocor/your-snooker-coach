@@ -9,9 +9,8 @@ import '../style/Landing.css';
 
 class Landing extends React.Component {
   componentDidMount() {
-    let token = document.querySelector('meta[name="csrf-token"]').content;
     const { getAllPlayers } = this.props;
-    getAllPlayers(token);
+    getAllPlayers();
   }
 
   render() { 

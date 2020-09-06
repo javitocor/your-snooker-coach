@@ -3,7 +3,7 @@ import axios from 'axios';
 import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError} from '../actions/coach';
 import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError }from '../actions/trainings'
 
-export const AllPlayersCall = (token) => async dispatch => {
+export const AllPlayersCall = () => async dispatch => {
   const Url = DEV_URL;
   try {
       dispatch(getAllPlayersPending());

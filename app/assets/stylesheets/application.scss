@@ -46,7 +46,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  padding: 150px 0;
+  padding: 100px 0;
   color: #fff;
   width: 100%;
   height: 100vh;
@@ -73,12 +73,18 @@
 }
 
 .hero-brand {
-  margin-bottom: 75px;
+  margin-bottom: 45px;
   display: inline-block;
 }
 
 .hero-brand:hover {
   opacity: .75;
+}
+
+.hero-brand img {
+  width: 50%;
+  height: 50%;
+  opacity: 0.4;
 }
 
 .tagline {

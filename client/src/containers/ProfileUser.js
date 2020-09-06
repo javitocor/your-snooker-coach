@@ -6,6 +6,7 @@ import { TrainingsCall } from '../helpers/APIcalls';
 import Spinner from 'react-bootstrap/Spinner';
 
 const ProfileUser = ({ getTrainings, userTrainings }) => {
+  console.log(userTrainings);
   const { error, pending, trainings } = userTrainings;
 
   useEffect(() => {
