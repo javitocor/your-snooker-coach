@@ -1,7 +1,6 @@
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { TrainingsCall } from '../helpers/APIcalls';
 import Spinner from 'react-bootstrap/Spinner';
 
