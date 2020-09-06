@@ -9,7 +9,7 @@ const Carousel1 = props => {
   return (
     <Carousel id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel" interval={5000} >
       {playerslist.map((player, index) => (
-        <Carousel.Item>
+        <Carousel.Item key={index + 100}>
           <CarouselItem index={index} player={player} />
         </Carousel.Item>
       ))}

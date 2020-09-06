@@ -16,10 +16,10 @@ class Landing extends React.Component {
   render() { 
     const { coach } = this.props;
     const { playersList } = coach;
-    return playersList.length === 0 ? <div className="d-flex justify-content-center"><Spinner animation="grow" /></div> :( 
-      <div className="col-md-10 col-sm-12 p-3 content">
+    return playersList.length === 0 ? <div className="d-flex justify-content-center align-items-center w-100"><Spinner animation="grow" /></div> :( 
+      <div className="col-md-10 col-sm-12 p-3 content mt-4">
         <div className="d-flex align-items-center justify-content-start text-success ml-1">
-          <h3 className="title"><u>HOME</u></h3>
+          <h3 className="title text-success"><u>HOME</u></h3>
         </div>
         <div className="text-center">
           <h3 className="text-white bg-success w-50 m-auto rounded p-2 border border-dark d-flex justify-content-around">

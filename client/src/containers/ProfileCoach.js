@@ -26,7 +26,7 @@ class ProfileCoach extends React.Component {
   render() {
     const { coach } = this.props;
     const { player } = coach;
-    return player.length === 0 ? <div className="d-flex justify-content-center"><Spinner animation="grow" /></div> : (
+    return player.length === 0 ? <div className="d-flex justify-content-center align-items-center w-100"><Spinner animation="grow" /></div> : (
       <div className="col-md-10 col-sm-12 p-3 content">
 
         <div className="row mt-3">
