@@ -8,7 +8,7 @@ const dropMenu = locations.map(
 );
 
 const Select = ({ handleChange, location }) => (
-  <select multiple name="location" value={location} onChange={event => handleChange(event)} className="custom-select bg-secondary" id="example-select">
+  <select name="location" value={location} onChange={event => handleChange(event)} className="custom-select" id="example-select">
     {dropMenu}
   </select>
 );

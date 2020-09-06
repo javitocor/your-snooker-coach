@@ -45,13 +45,13 @@ class Modal extends React.Component {
           Book a Training
       </button>
 
-        <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog"
           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content bg-secondary">
               <div className="modal-header">
                 <div className="d-flex flex-column text-left">
-                  <h5 className="modal-title" id="exampleModalLongTitle">Book a training with {player.name}</h5>
+                  <h5 className="modal-title text-success font-weight-bold" id="exampleModalLongTitle">Book a training with {player.name}</h5>
                   <small className="text-left">Select Location and Date</small>
                 </div>
 
@@ -59,8 +59,8 @@ class Modal extends React.Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div className="modal-body bg-secondary">
-                <form onSubmit={this.onSubmit} className="needs-validation" novalidate>
+              <div className="modal-body">
+                <form onSubmit={this.onSubmit} className="needs-validation" noValidate>
                   <div className="form-group row">
                     <label htmlFor="example-select" className="col-2 col-form-label">Location</label>
                     <div className="col-10">
@@ -70,7 +70,7 @@ class Modal extends React.Component {
                   <div className="form-group row">
                     <label htmlFor="validationCustomt" className="col-2 col-form-label">Date</label>
                     <div className="col-10">
-                      <input name="date" className="form-control bg-secondary" type="date" value={this.state.date} onChange={this.handleChange} id="validationCustom" />
+                      <input name="date" className="form-control" type="date" value={this.state.date} onChange={this.handleChange} id="validationCustom" />
                       <div className="valid-feedback">
                         Looks good!
                     </div>
