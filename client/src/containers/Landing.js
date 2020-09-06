@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { AllPlayersCall } from '../helpers/APIcalls';
 import Carousel from '../components/Carousel';
+import Spinner from 'react-bootstrap/Spinner';
 import '../style/Landing.css';
 
 class Landing extends React.Component {
@@ -16,7 +17,7 @@ class Landing extends React.Component {
   render() { 
     const { coach } = this.props;
     const { playersList } = coach;
-    return ( 
+    return playersList.length === 0 ? <div className="d-flex justify-content-center"><Spinner animation="grow" /></div> :( 
       <div className="col-md-10 col-sm-12 p-3 content">
         <div className="d-flex align-items-center justify-content-start text-success ml-1">
           <h3 className="title"><u>HOME</u></h3>

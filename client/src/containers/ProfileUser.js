@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {TrainingsCall} from '../helpers/APIcalls';
+import Spinner from 'react-bootstrap/Spinner';
 
 const ProfileUser = ({ getTrainings, userTrainings }) => {
   const { error, pending, trainings} = userTrainings;
@@ -13,12 +14,14 @@ const ProfileUser = ({ getTrainings, userTrainings }) => {
 
   if (error) {
     return (
-      <div>{error}</div>
+      <div className="d-flex justify-content-center">{error}</div>
     );
   }
   if (pending) {
     return (
-      <div className="">...Loading...</div>
+      <div className="d-flex justify-content-center">
+        <Spinner animation="grow" />
+      </div>
     );
   }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Spinner from 'react-bootstrap/Spinner';
 import Table from '../components/Table';
 import Donut from '../components/Donut';
 import Modal from '../components/Modal';
@@ -24,7 +25,7 @@ class ProfileCoach extends React.Component {
   render() {
     const { coach } = this.props;
     const { player } = coach;
-    return (
+    return player.length === 0 ? <div className="d-flex justify-content-center"><Spinner animation="grow" /></div> : (
       <div className="col-md-10 col-sm-12 p-3 content">
 
         <div className="row mt-3">
