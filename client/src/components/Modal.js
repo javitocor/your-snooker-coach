@@ -5,13 +5,14 @@ import Select from './Select';
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    const { player } = this.props
+    const {player} = this.props;
     this.state = {
       location: '',
       date: '',
-      player_id: player.id
+      player_id: player.id,
     }
-
+    console.log(player.id);
+    console.log(this.state);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -26,14 +27,17 @@ class Modal extends React.Component {
 
   onSubmit(e) {
     const { addTraining, player } = this.props;
+    console.log(player);
+    console.log(player.id);
+    this.setState({
+      player_id: player.id
+    }, console.log(this.state));
+    
     let data = this.state;
+    console.log(data);
     e.preventDefault();
     addTraining(data);
-    this.setState({
-      date: '',
-      location: '',
-      player_id: player.id,
-    });
+    
   }
 
   render() {

@@ -9,7 +9,6 @@ export const AllPlayersCall = () => async dispatch => {
       dispatch(getAllPlayersPending());
 
     const response = await fetch(`${Url}players`, { mode: 'cors' });
-    /*const response = await axios.get(`http://localhost:3000/api/v1/players`);*/
     const playersList = await response.json();
     dispatch(getAllPlayers(playersList));
     return playersList;
@@ -65,6 +64,7 @@ export const CreateTrainingsCall = (token, data) => async dispatch => {
     dispatch(createTraining(training));
     return trainings;
   } catch (error) {
+      console.log(error);
       dispatch(createTrainingError(error));
   }
 };

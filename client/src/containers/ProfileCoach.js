@@ -10,6 +10,10 @@ import CoachCard from '../components/CoachCard';
 import { PlayerCall, CreateTrainingsCall } from '../helpers/APIcalls';
 
 class ProfileCoach extends React.Component {
+  constructor(props){
+    super(props);
+    this.addTraining = this.addTraining.bind(this);
+  }
   componentDidMount() {
     const { location } = this.props;
     const { playerId } = location.state;
@@ -19,7 +23,7 @@ class ProfileCoach extends React.Component {
 
   addTraining(data) {
     const { postTraining } = this.props;
-    const token = document.querySelector('meta[name="csrf-token"]').content;
+    let token = document.querySelector('meta[name="csrf-token"]').content;
     postTraining(token, data);
   }
 

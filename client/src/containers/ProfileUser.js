@@ -7,7 +7,6 @@ import Spinner from 'react-bootstrap/Spinner';
 import '../style/ProfileUser.css';
 
 const ProfileUser = ({ getTrainings, userTrainings }) => {
-  console.log(userTrainings);
   const { error, pending, trainings } = userTrainings;
 
   useEffect(() => {
