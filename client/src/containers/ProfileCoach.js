@@ -6,6 +6,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Table from '../components/Table';
 import Donut from '../components/Donut';
 import Modal from '../components/Modal';
+import CoachCard from '../components/CoachCard';
 import { PlayerCall, CreateTrainingsCall } from '../helpers/APIcalls';
 
 class ProfileCoach extends React.Component {
@@ -31,21 +32,7 @@ class ProfileCoach extends React.Component {
         <div className="row mt-3">
           <div className="col-md-8 col-12">
 
-            <div>
-              <div className=" ml-2 mb-4">
-                <h3 className="text-success title"><u>Coach Profile</u></h3>
-              </div>
-              <figure className="snip1174 red">
-                <img src={player.image} />
-                <figcaption>
-                  <h2>{player.name}</h2>
-                  <p>
-                    Professional Snooker Player
-                  </p>
-                  <div>{player.info}</div>
-                </figcaption>
-              </figure>
-            </div>
+            <CoachCard player={player} />
 
           </div>
           <div className="col-md-4 col-sm-12 d-flex flex-column">
