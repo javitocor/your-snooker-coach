@@ -5,7 +5,9 @@ import CarouselItem from '../../components/CarouselItem';
 
 describe('<CarouselItem />', () => {
   it('Renders <CarouselItem /> component correctly', () => {
-    const { getByText } = render(<BrowserRouter><CarouselItem /></BrowserRouter>);
+    const index = 1;
+    const player = 'a';
+    const { getByText } = render(<BrowserRouter><CarouselItem index={index} player={player}/></BrowserRouter>);
     expect(getByText(/Profesional Since/i)).toBeInTheDocument();
   });
 });

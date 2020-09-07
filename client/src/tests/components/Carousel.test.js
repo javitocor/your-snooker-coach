@@ -5,7 +5,8 @@ import Carousel1 from '../../components/Carousel';
 
 describe('<Carousel1 />', () => {
   it('Renders <Carousel1 /> component correctly', () => {
-    const { getByText } = render(<BrowserRouter><Carousel1 /></BrowserRouter>);
-    expect(getByText(/Profesional Since/i)).toBeInTheDocument();
+    const playersList = ['a', 'b']
+    const { getAllByText } = render(<BrowserRouter><Carousel1 playerslist={playersList} key={playersList} /></BrowserRouter>);
+    expect(getAllByText(/Profesional Since/i)[0]).toBeInTheDocument();
   });
 });
