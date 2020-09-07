@@ -5,6 +5,6 @@ import App from '../../components/App';
 describe('<App />', () => {
   it('Renders <App /> component correctly', () => {
     render(<App />);
-    expect(screen.getByText(/Your snooker coach/i)).toBeInTheDocument();
+    expect(screen.getByText(/home/i)).toBeInTheDocument();
   });
 });
