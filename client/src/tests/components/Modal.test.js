@@ -5,7 +5,9 @@ import Modal from '../../components/Modal';
 
 describe('<Modal />', () => {
   it('Renders <Modal /> component correctly', () => {
-    const { getByText } = render(<BrowserRouter><Modal /></BrowserRouter>);
+    const player = {name: 'player'};
+    const addTraining = (a) => {return a+0};
+    const { getByText } = render(<BrowserRouter><Modal player={player} addTraining={addTraining} /></BrowserRouter>);
     expect(getByText(/select location and date/i)).toBeInTheDocument();
   });
 });

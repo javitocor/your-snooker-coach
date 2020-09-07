@@ -5,7 +5,8 @@ import CoachCard from '../../components/CoachCard';
 
 describe('<CoachCard />', () => {
   it('Renders <CoachCard /> component correctly', () => {
-    const { getByText } = render(<BrowserRouter><CoachCard /></BrowserRouter>);
+    const player = {name: 'Player'};
+    const { getByText } = render(<BrowserRouter><CoachCard player={player}/></BrowserRouter>);
     expect(getByText(/Professional/i)).toBeInTheDocument();
   });
 });

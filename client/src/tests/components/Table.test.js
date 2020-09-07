@@ -5,7 +5,8 @@ import Table from '../../components/Table';
 
 describe('<Table />', () => {
   it('Renders <Table /> component correctly', () => {
-    const { getByText } = render(<BrowserRouter><Table /></BrowserRouter>);
+    const player = {name:'a',nationality:'a',born:'a'};
+    const { getByText } = render(<BrowserRouter><Table key={player} player={player} /></BrowserRouter>);
     expect(getByText(/nationality/i)).toBeInTheDocument();
   });
 });
