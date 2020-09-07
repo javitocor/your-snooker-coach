@@ -7,6 +7,5 @@ RSpec.describe User, type: :model do
   context 'Validations for users' do
     it { should validate_presence_of(:username) }
     it { should validate_uniqueness_of(:username).ignoring_case_sensitivity }
-    it { should validate_uniqueness_of(:username).allow_blank }
   end
 end

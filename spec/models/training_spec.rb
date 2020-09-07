@@ -12,7 +12,7 @@ RSpec.describe Training, type: :model do
   end
   context 'Testing scopes for trainings' do
     it 'applies a default scope to trainings by most recent' do
-      expect(Gambit.all.ordered_by_most_recent.to_sql).to eq Gambit.all.order(created_at: :desc).to_sql
+      expect(Training.all.ordered_by_most_recent.to_sql).to eq Training.all.order(created_at: :desc).to_sql
     end
   end
 end

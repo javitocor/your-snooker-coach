@@ -51,6 +51,8 @@ group :development do
   gem 'rubocop', '~>0.81.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :test do
