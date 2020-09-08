@@ -7,7 +7,7 @@ export const AllPlayersCall = () => async dispatch => {
   try {
       dispatch(getAllPlayersPending());
 
-    const response = await fetch(`${Url}players`, { mode: 'cors' });
+    const response = await fetch(`/players`, { mode: 'cors' });
     const playersList = await response.json();
     dispatch(getAllPlayers(playersList));
     return playersList;
@@ -21,7 +21,7 @@ export const PlayerCall = (id) => async dispatch => {
   try {
       dispatch(getPlayerPending());
 
-    const response = await fetch(`${Url}players/${id}`, { mode: 'cors' });
+    const response = await fetch(`/players/${id}`, { mode: 'cors' });
     const player = await response.json();
     dispatch(getPlayer(player));
     return player;
@@ -35,7 +35,7 @@ export const TrainingsCall = () => async dispatch => {
   try {
       dispatch(getTrainingsPending());
 
-    const response = await fetch(`${Url}trainings`, { mode: 'cors' });
+    const response = await fetch(`/trainings`, { mode: 'cors' });
     const trainings = await response.json();
     dispatch(getTrainings(trainings));
     return trainings;
@@ -49,7 +49,7 @@ export const CreateTrainingsCall = (token, data) => async dispatch => {
   try {
       dispatch(createTrainingPending());
 
-    const response = await fetch(`${Url}trainings`, {
+    const response = await fetch(`/trainings`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
