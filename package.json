@@ -21,5 +21,20 @@
     "stylelint-csstree-validator": "^1.8.0",
     "stylelint-scss": "^3.17.2",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "engines": {
+
+    "node": "14.4.0"
+
+  },
+
+"scripts": {
+
+"build": "cd client && npm install && npm run build && cd ..",
+
+  "deploy": "cp -a client/build/. public/",
+
+"postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+
+ }
 }
