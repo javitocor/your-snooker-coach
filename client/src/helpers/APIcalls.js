@@ -61,7 +61,7 @@ export const CreateTrainingsCall = (token, data) => async dispatch => {
     })
     const training = await response.json();
     dispatch(createTraining(training));
-    return trainings;
+    return training;
   } catch (error) {
       console.log(error);
       dispatch(createTrainingError(error));
