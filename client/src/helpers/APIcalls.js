@@ -1,4 +1,4 @@
-import { DEV_URL } from './constants';
+import { DEV_URL, PROD_URL } from './constants';
 import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError} from '../actions/coach';
 import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError }from '../actions/trainings'
 
