@@ -12,12 +12,7 @@ describe('tests for seasons reducer', () => {
   const data2 = {
     training: ['new training'],
   };
-  const result2 = {
-    error: null,
-    pending: false,
-    trainings: [],
-    training: {training:['new training']}
-  }
+  
   test('returns initial state', () => {
     expect(trainingsReducer(initialStateTrainings, {})).toEqual(initialStateTrainings);
   });
@@ -31,6 +26,9 @@ describe('tests for seasons reducer', () => {
     expect(trainingsReducer(initialStateTrainings, {
       type: CREATE_TRAINING,
       training: data2,
-    })).toEqual(result2);
+    })).toEqual({
+      ...initialStateTrainings,
+      training: {training: ['new training']}
+    });
   });
 });

@@ -13,12 +13,6 @@ describe('tests for coach reducer', () => {
   const data2 = {
     player: 'player',
   };
-  const result2 = {
-    error: null,
-    pending: false,
-    player: {player: 'player'},
-    playersList: []
-  }
   test('returns initial state', () => {
     expect(coachReducer(initialStatePlayers, {})).toEqual(initialStatePlayers);
   });
@@ -32,6 +26,9 @@ describe('tests for coach reducer', () => {
     expect(coachReducer(initialStatePlayers, {
       type: GET_PLAYER,
       player: data2,
-    })).toEqual(result2);
+    })).toEqual({
+      ...initialStatePlayers,
+      player: {player: 'player'},
+    });
   });
 });
