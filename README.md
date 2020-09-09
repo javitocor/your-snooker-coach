@@ -32,19 +32,19 @@ You can find the description of the project [here](https://www.notion.so/Final-C
 
 
 Landing Page:
-![screenshot](./src/assets/screenshot.png)
+![screenshot](./app/assets/images/screenshot.png)
 
 Login Page: 
-![screenshot](./src/assets/screenshot1.png)
+![screenshot](./app/assets/images/screenshot2.png)
 
 App Landing Page: 
-![screenshot](./src/assets/screenshot1.png)
+![screenshot](./app/assets/images/screenshot3.png)
 
 Player Profile: 
-![screenshot](./src/assets/screenshot1.png)
+![screenshot](./app/assets/images/screenshot4.png)
 
-User Profile: 
-![screenshot](./src/assets/screenshot1.png) 
+About us: 
+![screenshot](./app/assets/images/screenshot5.png) 
 
 Additional description about the project and its features.
 
@@ -66,7 +66,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Heroku Live Demo Link]() :point_left:
+[Heroku Live Demo Link](https://yoursnookercoach.herokuapp.com/) :point_left:
 
 [Presentation Video Link]() :point_left:
 
