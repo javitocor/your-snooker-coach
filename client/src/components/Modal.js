@@ -11,6 +11,8 @@ class Modal extends React.Component {
       date: '',
       player_id: player.id,
     }
+    console.log(player.id);
+    console.log(this.state);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -25,11 +27,17 @@ class Modal extends React.Component {
 
   onSubmit(e) {
     const { addTraining, player } = this.props;
+    console.log(player);
+    console.log(player.id);
     this.setState({
       player_id: player.id
-    });    
+    }, console.log(this.state));
+    
     let data = this.state;
-    addTraining(data);    
+    console.log(data);
+    e.preventDefault();
+    addTraining(data);
+    
   }
 
   render() {
@@ -72,7 +80,7 @@ class Modal extends React.Component {
                     </div>
                     </div>
                   </div>
-                  <button className="btn btn-success bWidth" type="submit">Confirm your training</button>
+                  <button className="btn btn-success bWidth" type="submit"  data-dismiss="modal">Confirm your training</button>
                 </form>
               </div>
               <div className="modal-footer">
