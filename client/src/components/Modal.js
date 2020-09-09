@@ -5,14 +5,11 @@ import Select from './Select';
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    const {player} = this.props;
     this.state = {
       location: '',
       date: '',
-      player_id: player.id,
+      player_id: 0,
     }
-    console.log(player.id);
-    console.log(this.state);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -23,6 +20,7 @@ class Modal extends React.Component {
     this.setState({
       [key]: newValue
     });
+    console.log(this.state);
   }
 
   onSubmit(e) {
@@ -31,13 +29,17 @@ class Modal extends React.Component {
     console.log(player.id);
     this.setState({
       player_id: player.id
-    }, console.log(this.state));
+    });
     
     let data = this.state;
     console.log(data);
     e.preventDefault();
     addTraining(data);
-    
+    this.setState({
+      location: '',
+      date: '',
+      player_id: 0,
+    })
   }
 
   render() {
@@ -80,7 +82,7 @@ class Modal extends React.Component {
                     </div>
                     </div>
                   </div>
-                  <button className="btn btn-success bWidth" type="submit"  data-dismiss="modal">Confirm your training</button>
+                  <button className="btn btn-success bWidth" type="submit"  >Confirm your training</button>
                 </form>
               </div>
               <div className="modal-footer">

@@ -1,5 +1,5 @@
 export const DEV_URL = 'http://localhost:3000/api/v1/';
-export const PROD_URL = 'https://yoursnookercoach.herokuapp.com/';
+export const PROD_URL = 'api/v1/';
 
 export const GET_ALL_PLAYERS = 'GET_ALL_PLAYERS';
 export const GET_ALL_PLAYERS_ERROR = 'GET__PLAYERS_ERROR';

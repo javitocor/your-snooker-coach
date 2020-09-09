@@ -43,6 +43,9 @@ App Landing Page:
 Player Profile: 
 ![screenshot](./app/assets/images/screenshot4.png)
 
+User Profile: 
+![screenshot](./app/assets/images/screenshot6.png) 
+
 About us: 
 ![screenshot](./app/assets/images/screenshot5.png) 
 

@@ -682,8 +682,9 @@ section .section-title {
 
 .card {
   margin: 0 !important;
-  width: 21rem !important;
+  width: 100%;
 }
+
 
 .mainflip {
   -webkit-transition: 1s;
@@ -740,7 +741,7 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-  min-height: 312px;
+  min-height: 400px;
 }
 
 .backside .card a {
