@@ -32,7 +32,7 @@ You can find the description of the project [here](https://www.notion.so/Final-C
 
 
 Landing Page:
-![screenshot](./app/assets/images/screenshot.png)
+![screenshot](./app/assets/images/screenshot1.png)
 
 Login Page: 
 ![screenshot](./app/assets/images/screenshot2.png)
@@ -71,10 +71,10 @@ Additional description about the project and its features.
 
 [Heroku Live Demo Link](https://yoursnookercoach.herokuapp.com/) :point_left:
 
-[Presentation Video Link]() :point_left:
+[Presentation Video Link](https://www.loom.com/share/2a5470b4d11e48639d3a5570552feeb3) :point_left:
 
 ## Getting Started
-- Follow the live demo link and book trinings with World Class players.
+- Follow the live demo link and book trainings with World Class players.
 
 ### Usage
 To have this app on your pc, you need to:
