@@ -3,8 +3,8 @@
 default: &default
   source_path: client
   source_entry_path: src
-  public_root_path: public
-  public_output_path: packs
+  public_root_path: client/build/
+  public_output_path: publlic
   cache_path: tmp/cache/webpacker
   webpack_compile_output: true
 
