@@ -36,7 +36,7 @@ const ProfileUser = ({ getTrainings, userTrainings }) => {
           <h5 className="section-title h1 text-center text-success">YOUR TRAININGS</h5>
           <div className="row">
             {trainings.map((training, index) => (
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div key={training} className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div className="image-flip">
                   <div className="mainflip flip-0">
                     <div className="frontside">
