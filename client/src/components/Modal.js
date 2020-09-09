@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from './Select';
+import $ from "jquery";
 
 class Modal extends React.Component {
   constructor(props) {
@@ -12,27 +13,32 @@ class Modal extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose() {
+    window.$('#exampleModalCenter').modal('hide');
   }
 
   handleChange = e => {
+    const { player } = this.props;
+    const id = player.id;
     let newValue = e.target.value;
     let key = e.target.name;
     this.setState({
-      [key]: newValue
+      [key]: newValue,
+      player_id: id,
     });
-    console.log(this.state);
   }
 
   onSubmit(e) {
     const { addTraining, player } = this.props;
-    console.log(player);
-    console.log(player.id);
+    const id = player.id;
     this.setState({
-      player_id: player.id
+      player_id: id,
     });
     
     let data = this.state;
-    console.log(data);
     e.preventDefault();
     addTraining(data);
     this.setState({
@@ -82,7 +88,7 @@ class Modal extends React.Component {
                     </div>
                     </div>
                   </div>
-                  <button className="btn btn-success bWidth" type="submit"  >Confirm your training</button>
+                  <button className="btn btn-success bWidth" type="submit" onClick = {this.handleClose} >Confirm your training</button>
                 </form>
               </div>
               <div className="modal-footer">
