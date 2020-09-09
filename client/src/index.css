@@ -560,7 +560,7 @@ html, body {
   margin-bottom: 47px;
 }
 .image img{
-  width: 15%;
+  width: 100%;
   height: 15%;
   opacity: 0.4;
 }
