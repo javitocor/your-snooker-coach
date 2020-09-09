@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../style/NavBar.css';
 
 const NavBar = () => (
   <div className="col-md-2 col-sm-12 h-100 p-3">
     <div className="d-flex flex-column">
-      <div className="text-center p-3">
-        <h2 className="text-success">Snooker</h2>
+      <div className="text-center p-3 image">
+        <img alt="snooker background" src="https://wst.tv/wp-content/uploads/2015/06/WS-logo.jpg" />
       </div>
       <div className="list-group" id="list-tab" role="tablist">
         <Link to="/" className="list-group-item list-group-item-action active list-group-item-success" id="list-home-list"
