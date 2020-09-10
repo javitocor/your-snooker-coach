@@ -32,30 +32,30 @@ export const createTrainingError = (error) => ({
   error
 });
 
-export const deletetraining = (training) => ({
+export const deleteTraining = (training) => ({
   type: DELETE_TRAINING,
   training,
 });
 
-export const deletetrainingPending = () => ({
+export const deleteTrainingPending = () => ({
   type: DELETE_TRAINING_PENDING,
 });
 
-export const deletetrainingError = (error) => ({
+export const deleteTrainingError = (error) => ({
   type: DELETE_TRAINING_ERROR,
   error
 });
 
-export const updatetraining = (training) => ({
+export const updateTraining = (training) => ({
   type: UPDATE_TRAINING,
   training
 });
 
-export const updatetrainingPending = () => ({
+export const updateTrainingPending = () => ({
   type: UPDATE_TRAINING_PENDING,
 });
 
-export const updatetrainingError = (error) => ({
+export const updateTrainingError = (error) => ({
   type: UPDATE_TRAINING_ERROR,
   error,
 });
