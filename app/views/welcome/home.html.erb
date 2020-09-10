@@ -14,7 +14,7 @@
         <p class="tagline">
           Train with the best professional players and become one of them.
         </p>
-        <a class="btn2" href="#about">Get Started Now</a>
+        <%= link_to('Get Started Now', new_user_session_path), class: "btn2"  %>
         <p class="text-muted mt-4">If you're logged in, check out <%= link_to "the app", app_path %>!</p>
       </div>
     </div>

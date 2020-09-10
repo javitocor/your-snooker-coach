@@ -2,7 +2,9 @@ import { DEV_URL, PROD_URL } from './constants';
 import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError,
   deletePlayer, deletePlayerPending, deletePlayerError, updatePlayer, updatePlayerPending, updatePlayerError
 } from '../actions/coach';
-import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError }from '../actions/trainings'
+import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError,
+  deleteTraining, deleteTrainingPending, deleteTrainingError, updateTraining, updateTrainingPending, updateTrainingError
+}from '../actions/trainings'
 
 export const AllPlayersCall = () => async dispatch => {
   const Url = DEV_URL;
@@ -112,5 +114,49 @@ export const CreateTrainingsCall = (token, data) => async dispatch => {
   } catch (error) {
       console.log(error);
       dispatch(createTrainingError(error));
+  }
+};
+
+export const TrainingUpdate = (id, data, token) => async dispatch => {
+  const Url = DEV_URL;
+  try {
+      dispatch(updateTrainingPending());
+
+    const response = await fetch(`${DEV_URL}players/${id}`, { 
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+      redirect: "error",
+      body: JSON.stringify(data)
+     });
+    const training = await response.json();
+    dispatch(updateTraining(training));
+    return training;
+  } catch (error) {
+      dispatch(updateTrainingError(error));
+  }
+};
+
+export const TrainingDelete = (id, token) => async dispatch => {
+  const Url = DEV_URL;
+  try {
+      dispatch(deleteTrainingPending());
+
+    const response = await fetch(`${DEV_URL}players/${id}`, { 
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+     });
+    const training = await response.json();
+    dispatch(deleteTraining(training));
+    return training;
+  } catch (error) {
+      dispatch(deleteTrainingError(error));
   }
 };
