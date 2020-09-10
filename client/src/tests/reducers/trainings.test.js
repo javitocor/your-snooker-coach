@@ -2,11 +2,11 @@ import trainingsReducer from '../../reducers/trainings';
 import { initialStateTrainings, GET_TRAININGS, DELETE_TRAINING, UPDATE_TRAINING, GET_TRAININGS_PENDING, GET_TRAININGS_ERROR, CREATE_TRAINING, CREATE_TRAINING_PENDING, CREATE_TRAINING_ERROR  } from '../../helpers/constants';
 
 describe('tests for trainings reducer', () => {
-  const data =  {trainings:['trainings']};
+  const data =  ['trainings'];
   const result = {
     error: null,
     pending: false,
-    trainings: {trainings:['trainings']},
+    trainings: data,
     training: [],
   }
   const data2 = {
@@ -28,7 +28,7 @@ describe('tests for trainings reducer', () => {
       training: data2,
     })).toEqual({
       ...initialStateTrainings,
-      training: {training: ['new training']}
+      training: data2
     });
   });
   test('delete a training', () => {

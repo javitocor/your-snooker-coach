@@ -3,12 +3,12 @@ import { initialStatePlayers, GET_ALL_PLAYERS, GET_PLAYER, DELETE_PLAYER, UPDATE
 
 
 describe('tests for coach reducer', () => {
-  const data = {playersList: ['a', 'a']};
+  const data = ['a', 'a'];
   const result = {
     error: null,
     pending: false,
     player: {},
-    playersList: {playersList: ['a', 'a']}
+    playersList: data
   }
   const data2 = {
     player: 'player',
@@ -28,7 +28,7 @@ describe('tests for coach reducer', () => {
       player: data2,
     })).toEqual({
       ...initialStatePlayers,
-      player: {player: 'player'},
+      player: data2,
     });
   });
   test('delete a player', () => {
