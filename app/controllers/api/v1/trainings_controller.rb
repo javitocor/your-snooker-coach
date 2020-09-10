@@ -1,7 +1,7 @@
 module Api 
   module V1
     class TrainingsController < ApplicationController
-      before_action :set_provider, only: [:show, :update, :destroy]
+      before_action :set_training, only: [:show, :update, :destroy]
       before_action :authenticate_user!
 
       def index 
@@ -15,7 +15,6 @@ module Api
 
       def create 
         if user_signed_in? 
-          ## @training = current_user.trainings.create(training_params) 
           @training = current_user.trainings.build(training_params)
           if @training && @training.save
             render json: @training, status: :created
@@ -59,7 +58,7 @@ module Api
 
       private 
 
-      def set_provider
+      def set_training
         @training = Training.find(params[:id])
       end
 

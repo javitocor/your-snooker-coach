@@ -32,6 +32,7 @@ module Api
           @player.update(player_params)
           if @player && @player.save
             render json: @player, status: :create
+            head :no_content
           else
             render json: { message: @player.errors.full_messages }, status: 400
           end
@@ -44,9 +45,10 @@ module Api
         if user_signed_in? 
           @player = Player.find(params[:id])          
           if @player.delete
-            render json: @player, status: :create
+            render { message: "Successfully removed player." }, status: 204
+            head :no_content
           else
-            render json: { message: @player.errors.full_messages }, status: 400
+            render json: { message: "Unable to remove player." }, status: 400
           end
         else
           render json: {}, status: 403
