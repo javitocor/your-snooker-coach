@@ -28,9 +28,8 @@ module Api
 
       def update 
         if user_signed_in? 
-          @player = Player.find(params[:id])
-          @player.update(player_params)
-          if @player && @player.save
+          @player = Player.find(params[:id])          
+          if @player.update(player_params)
             render json: @player, status: :create
             head :no_content
           else

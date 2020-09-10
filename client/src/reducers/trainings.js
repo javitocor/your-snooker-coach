@@ -1,4 +1,7 @@
-import { initialStateTrainings, GET_TRAININGS, GET_TRAININGS_PENDING, GET_TRAININGS_ERROR, CREATE_TRAINING, CREATE_TRAINING_PENDING, CREATE_TRAINING_ERROR  } from '../helpers/constants';
+import { initialStateTrainings, GET_TRAININGS, GET_TRAININGS_PENDING, GET_TRAININGS_ERROR, 
+  CREATE_TRAINING, CREATE_TRAINING_PENDING, CREATE_TRAINING_ERROR,
+  DELETE_TRAINING, DELETE_TRAINING_PENDING, DELETE_TRAINING_ERROR,
+  UPDATE_TRAINING, UPDATE_TRAINING_PENDING, UPDATE_TRAINING_ERROR  } from '../helpers/constants';
 
 const trainingsReducer = (state = initialStateTrainings, action) => {
   switch (action.type) {
@@ -36,6 +39,39 @@ const trainingsReducer = (state = initialStateTrainings, action) => {
         pending: false,
         error: action.error,
       };
+      case UPDATE_TRAINING:
+        const newState = state.trainings.map(training => training.id === action.training.id ? action.training : training);
+        return {
+          ...state,
+          trainings: newState,
+        }
+      case UPDATE_TRAINING_PENDING:
+        return {
+          ...state,
+          pending: true,
+        };
+      case UPDATE_TRAINING_ERROR:
+        return {
+          ...state,
+          pending: false,
+          error: action.error,
+        };
+      case DELETE_TRAINING:
+        return {
+          ...state,
+          trainings: state.trainings.filter((data, i) => i !== action.training.id),
+        }
+      case DELETE_TRAINING_PENDING:
+        return {
+          ...state,
+          pending: true,
+        };
+      case DELETE_TRAINING_ERROR:
+        return {
+          ...state,
+          pending: false,
+          error: action.error,
+        };
     default:
       return state;
   }
