@@ -59,7 +59,7 @@ const trainingsReducer = (state = initialStateTrainings, action) => {
       case DELETE_TRAINING:
         return {
           ...state,
-          trainings: state.trainings.filter((data, i) => i !== action.training.id),
+          trainings: state.trainings.filter(data => data.id !== action.training.id),
         }
       case DELETE_TRAINING_PENDING:
         return {

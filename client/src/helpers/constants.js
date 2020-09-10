@@ -18,8 +18,8 @@ export const UPDATE_PLAYER_ERROR = 'UPDATE_PLAYER_ERROR';
 export const initialStatePlayers = {
   error: null,
   pending: false,
-  TRAININGsList: [],
-  TRAINING: {},
+  playersList: [],
+  player: {},
 }
 
 export const GET_TRAININGS = 'GET_TRAININGS';

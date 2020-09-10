@@ -2,7 +2,6 @@ module Api
   module V1
     class PlayersController < ApplicationController
       before_action :authenticate_user!
-      before_action :authenticate_admin!, only: [:create, :update, :destroy]
       
       def index 
         if user_signed_in?
@@ -44,7 +43,7 @@ module Api
         if user_signed_in? 
           @player = Player.find(params[:id])          
           if @player.delete
-            render { message: "Successfully removed player." }, status: 204
+            render json: { message: "Successfully removed player." }, status: 204
             head :no_content
           else
             render json: { message: "Unable to remove player." }, status: 400

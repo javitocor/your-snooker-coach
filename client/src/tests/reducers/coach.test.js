@@ -1,5 +1,5 @@
 import coachReducer from '../../reducers/coach';
-import { initialStatePlayers, GET_ALL_PLAYERS, GET_PLAYER } from '../../helpers/constants';
+import { initialStatePlayers, GET_ALL_PLAYERS, GET_PLAYER, DELETE_PLAYER, UPDATE_PLAYER } from '../../helpers/constants';
 
 
 describe('tests for coach reducer', () => {
@@ -29,6 +29,76 @@ describe('tests for coach reducer', () => {
     })).toEqual({
       ...initialStatePlayers,
       player: {player: 'player'},
+    });
+  });
+  test('delete a player', () => {
+    const players = [
+      {
+        id: 1,
+        name:'peter',
+      },
+      {
+        id:2,
+        name: 'john',
+      }
+    ];
+    const player = {
+      id: 1,
+      name:'peter',
+    }
+    expect(coachReducer({
+      error: null,
+      pending: false,
+      playersList: players,
+      player: {},
+    }, {
+      type: DELETE_PLAYER,
+      player: player,
+    })).toEqual({
+      error: null,
+      pending: false,
+      player: {},
+      playersList: [{
+        id:2,
+        name: 'john',
+      }]
+    });
+  });
+  test('update a player', () => {
+    const players = [
+      {
+        id: 1,
+        name:'peter',
+      },
+      {
+        id:2,
+        name: 'john',
+      }
+    ];
+    const player = {
+      id: 1,
+      name:'Alan',
+    }
+    expect(coachReducer({
+      error: null,
+      pending: false,
+      playersList: players,
+      player: {},
+    }, {
+      type: UPDATE_PLAYER,
+      player: player,
+    })).toEqual({
+      error: null,
+      pending: false,
+      player: {},
+      playersList: [{
+        id: 1,
+        name:'Alan',
+      },
+      {
+        id:2,
+        name: 'john',
+      }]
     });
   });
 });

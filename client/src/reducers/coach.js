@@ -1,4 +1,4 @@
-import { GET_ALL_PLAYERS, GET_ALL_PLAYERS_ERROR, GET_ALL_PLAYERS_PENDING, 
+import { initialStatePlayers, GET_ALL_PLAYERS, GET_ALL_PLAYERS_ERROR, GET_ALL_PLAYERS_PENDING, 
   GET_PLAYER, GET_PLAYER_ERROR, GET_PLAYER_PENDING,
   DELETE_PLAYER, DELETE_PLAYER_PENDING, DELETE_PLAYER_ERROR,
   UPDATE_PLAYER, UPDATE_PLAYER_PENDING, UPDATE_PLAYER_ERROR
@@ -60,7 +60,7 @@ const coachReducer = (state = initialStatePlayers, action) => {
     case DELETE_PLAYER:
       return {
         ...state,
-        playersList: state.playersList.filter((data, i) => i !== action.player.id),
+        playersList: state.playersList.filter((data, i) => data.id !== action.player.id),
       }
     case DELETE_PLAYER_PENDING:
       return {
