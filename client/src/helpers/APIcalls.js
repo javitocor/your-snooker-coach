@@ -1,5 +1,7 @@
 import { DEV_URL, PROD_URL } from './constants';
-import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError} from '../actions/coach';
+import {getAllPlayersPending, getAllPlayers, getAllPlayersError, getPlayerPending, getPlayer, getPlayerError,
+  deletePlayer, deletePlayerPending, deletePlayerError, updatePlayer, updatePlayerPending, updatePlayerError
+} from '../actions/coach';
 import {getTrainingsPending, getTrainings, getTrainingsError, createTrainingPending, createTraining, createTrainingError }from '../actions/trainings'
 
 export const AllPlayersCall = () => async dispatch => {
@@ -29,6 +31,51 @@ export const PlayerCall = (id) => async dispatch => {
       dispatch(getPlayerError(error));
   }
 };
+
+export const PlayerUpdate = (id, data, token) => async dispatch => {
+  const Url = PROD_URL;
+  try {
+      dispatch(updatePlayerPending());
+
+    const response = await fetch(`${PROD_URL}players/${id}`, { 
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+      redirect: "error",
+      body: JSON.stringify(data)
+     });
+    const player = await response.json();
+    dispatch(updatePlayer(player));
+    return player;
+  } catch (error) {
+      dispatch(updatePlayerError(error));
+  }
+};
+
+export const PlayerDelete = (id, token) => async dispatch => {
+  const Url = PROD_URL;
+  try {
+      dispatch(deletePlayerPending());
+
+    const response = await fetch(`${PROD_URL}players/${id}`, { 
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+     });
+    const player = await response.json();
+    dispatch(deletePlayer(player));
+    return player;
+  } catch (error) {
+      dispatch(deletePlayerError(error));
+  }
+};
+
 
 export const TrainingsCall = () => async dispatch => {
   const Url = PROD_URL;
