@@ -17,27 +17,27 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-            <%= f.text_field :username, autofocus: true, autocomplete: "username", class:"form-control" %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class:"form-control", placeholder: "Insert your Name" %>
 						
 					</div>
           <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-at"></i></span>
 						</div>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder: "Insert your Email" %>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>						
-            <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+            <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder: "Insert your Password" %>
 					</div>
           <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+						<%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", , placeholder: "Password Confirmation" %>
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
