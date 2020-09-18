@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/NavBar.css';
 
 const NavBar = () => (
-  <div className="col-md-2 col-sm-12 h-100 p-3">
+  <div className="col-md-2 col-sm-12 h-100 p-3 mt-4">
     <div className="d-flex flex-column">
       <div className="text-center p-3 image">
         <img alt="snooker background" src="https://wst.tv/wp-content/uploads/2015/06/WS-logo.jpg" />
