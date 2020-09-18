@@ -33,7 +33,7 @@ class ProfileCoach extends React.Component {
     return player.length === 0 ? <div className="d-flex justify-content-center align-items-center w-100"><Spinner animation="grow" /></div> : (
       <div className="col-md-10 col-sm-12 p-3 content">
 
-        <div className="row mt-3">
+        <div className="row mt-4">
           <div className="col-md-8 col-12">
 
             <CoachCard player={player} />
