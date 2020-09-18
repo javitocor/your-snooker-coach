@@ -51,7 +51,7 @@ class Modal extends React.Component {
   render() {
     const { player } = this.props;
     return (
-      <div className=" w-75 mx-auto my-4 text-center">
+      <div className=" w-75 mx-auto my-3 text-center">
 
         <button type="button" className="btn btn-success p-3 bWidth" data-toggle="modal" data-target="#exampleModalCenter">
           Book a Training
