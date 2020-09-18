@@ -522,6 +522,7 @@ code {
 
 html, body {
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 }
 .content {
   overflow: auto;
@@ -803,4 +804,18 @@ section .section-title {
 		padding-right: 10px; 
 		white-space: nowrap;
 	}
+}
+
+#myCarousel,
+.carousel-inner {
+  height: 350px;
+}
+
+.about {
+  height: 250px;
+  margin-bottom: 1.25rem !important;
+}
+
+.her {
+  overflow: hidden;
 }
