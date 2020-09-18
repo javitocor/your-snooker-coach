@@ -7,7 +7,7 @@ import '../style/Carousel.css';
 const Carousel1 = props => {
   const { playerslist } = props;
   return (
-    <Carousel id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel" interval={5000} >
+    <Carousel id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel" interval={5000} controls={false}>
       {playerslist.map((player, index) => (
         <Carousel.Item key={index + 100}>
           <CarouselItem index={index} player={player} />
