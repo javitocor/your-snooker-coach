@@ -19,14 +19,14 @@ class Landing extends React.Component {
     return playersList.length === 0 ? <div className="d-flex justify-content-center align-items-center w-100"><Spinner animation="grow" /></div> :( 
       <div className="col-md-10 col-sm-12 p-3 content mt-4">
         <div className="d-flex align-items-center justify-content-start text-success ml-1">
-          <h3 className="title text-success"><u>HOME</u></h3>
+          <h3 className="d-none title text-success"><u>HOME</u></h3>
         </div>
         <div className="text-center">
           <h3 className="text-white bg-success w-50 m-auto rounded p-2 border border-dark d-flex justify-content-around">
             Select Your Coach<small className="mt-2"><i className="fas fa-chevron-down"></i></small></h3>
           <span className="tex-mute text-success">Select over Top-Class Professional Players</span>
         </div>
-        <div className="jumbotron bg-success p-4 mt-5">
+        <div className="jumbotron bg-success p-4 mt-2">
           <Carousel1 key={playersList} playerslist={playersList} />
         </div>
       </div>
@@ -56,6 +56,11 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);
+
+
+
+
+  
 
 
 
