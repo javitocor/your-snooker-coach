@@ -11,7 +11,7 @@ const App = () => (
   <Router>
     <Switch>
       <>
-        <div className=" p-3 mt-3 mb-3">
+        <div className=" p-3">
           <div className="row d-sm-flex flex-sm-column d-md-flex flex-md-row">
             <Route path="/" component={NavBar} />
             <Route exact path="/" component={Landing} />
@@ -26,3 +26,4 @@ const App = () => (
 );
 
 export default App;
+
