@@ -13,7 +13,58 @@
  *= require_tree .
  *= require_self
  */
- a {
+
+ .turbolinks-progress-bar {
+  background-color: #28a745;
+}
+ body {
+  background-color: rgba(0, 0, 0, 1) !important;
+  opacity: 1;
+  height: 100vh;
+ }
+
+ #error_explanation h2 {
+  font-size: 1.1rem;
+  color: red;
+  background-color: #28a745;
+  padding: 6px;
+  margin-bottom: 0;
+ }
+
+ #error_explanation ul  {
+  background-color: #28a745;
+ }
+
+ #error_explanation ul li  {
+  font-size: 0.8rem;
+  color: red;
+ }
+
+.alert1 {
+  background-color: red;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 56px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 700;
+  display: none;
+}
+
+.notice {
+  display: none;
+  background-color: #28a745;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 56px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+a {
   transition: 0.5s;
   color: #28a745;
  }
@@ -46,7 +97,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  padding: 100px 0;
   color: #fff;
   width: 100%;
   height: 100vh;
@@ -70,10 +120,11 @@
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+  padding-top: 60px !important
 }
 
 .hero-brand {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   display: inline-block;
 }
 
@@ -115,6 +166,7 @@ background-repeat: no-repeat;
 background-color: #464646;
 height: 100%;
 font-family: 'Numans', sans-serif;
+padding-top: 95px;
 }
 
 .container{
@@ -208,6 +260,7 @@ margin-left: 4px;
 .myHead {
   background-color: black;
   color: #28a745;
+  height: 50px;
 }
 
 #navbarSupportedContent ul li a {
@@ -216,8 +269,11 @@ margin-left: 4px;
 
 .myFoot {
   background-color: black;
+  display: none;
 }
 
 .myFoot div a {
   color: #28a745;
 }
+
+
