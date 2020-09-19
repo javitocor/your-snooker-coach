@@ -24,7 +24,7 @@
  }
 
  #error_explanation h2 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: red;
   background-color: #28a745;
   padding: 6px;
@@ -33,11 +33,16 @@
 
  #error_explanation ul  {
   background-color: #28a745;
+  margin-bottom: 0 !important;
  }
 
  #error_explanation ul li  {
   font-size: 0.8rem;
   color: red;
+ }
+
+ .bodyCard {
+   padding-top: 0 !important;
  }
 
 .alert1 {
