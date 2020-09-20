@@ -32,7 +32,6 @@
  }
 
  #error_explanation ul  {
-  background-color: #28a745;
   margin-bottom: 0 !important;
  }
 
@@ -40,6 +39,57 @@
   font-size: 0.8rem;
   color: red;
  }
+
+ .alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-danger {
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
 
  .bodyCard {
    padding-top: 0 !important;
