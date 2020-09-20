@@ -1,4 +1,5 @@
-html, body {  
+html,
+body {
   height: 100vh;
 }
 
@@ -7,7 +8,7 @@ html, body {
   position: relative;
 }
 
-.content:before {
+.content::before {
   content: "";
   position: fixed;
   top: 0;
@@ -15,17 +16,9 @@ html, body {
   left: 0;
   right: 0;
   z-index: -1;
-
   display: block;
   background-image: url('https://wst.tv/wp-content/uploads/blurred/news-single-2000x1222.jpg');
-  background-size:cover;
-  
-
-  /*-webkit-filter: blur(8px);
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -ms-filter: blur(8px);
-  filter: blur(8px);*/
+  background-size: cover;
 }
 
 .title {

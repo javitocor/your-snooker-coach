@@ -14,12 +14,18 @@
   position: relative;
 }
 
-#team:before {
+#team::before {
   background-image: url('https://ak.picdn.net/shutterstock/videos/6548744/thumb/1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #464646;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: rgb(40, 167, 69);
+  border-color: rgb(40, 167, 69);
 }
 
 .btn-primary:hover,
@@ -28,12 +34,6 @@
   border-color: rgb(40, 167, 69);
   box-shadow: none;
   outline: none;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: rgb(40, 167, 69);
-  border-color: rgb(40, 167, 69);
 }
 
 section {
@@ -47,46 +47,19 @@ section .section-title {
   text-transform: uppercase;
 }
 
-#team .card {
-  border: none;
-  background: #ffffff;
-}
-
-.image-flip:hover .backside,
-.image-flip.hover .backside {
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  border-radius: .25rem;
-}
-
-.image-flip:hover .frontside,
-.image-flip.hover .frontside {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
 .card {
   margin: 0 !important;
   width: 100%;
 }
 
+.frontside .card,
+.backside .card {
+  min-height: 400px;
+}
 
-.mainflip {
-  -webkit-transition: 1s;
-  -webkit-transform-style: preserve-3d;
-  -ms-transition: 1s;
-  -moz-transition: 1s;
-  -moz-transform: perspective(1000px);
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transition: 1s;
-  transform-style: preserve-3d;
-  position: relative;
+#team .card {
+  border: none;
+  background: #fff;
 }
 
 .frontside {
@@ -129,9 +102,35 @@ section .section-title {
   transform-style: preserve-3d;
 }
 
-.frontside .card,
-.backside .card {
-  min-height: 400px;
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 .backside .card a {
@@ -152,7 +151,7 @@ section .section-title {
 
 .fa-battery-full,
 .fa-check-circle,
-.fa-handshake, 
+.fa-handshake,
 .fa-calendar-day {
   color: rgb(40, 167, 69);
 }
@@ -160,5 +159,3 @@ section .section-title {
 .main {
   overflow-y: hidden !important;
 }
-
-

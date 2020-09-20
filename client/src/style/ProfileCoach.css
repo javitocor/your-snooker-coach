@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.content:before {
+.content::before {
   content: "";
   position: fixed;
   top: 0;
@@ -22,17 +22,9 @@
   left: 0;
   right: 0;
   z-index: -1;
-
   display: block;
   background-image: url('https://wst.tv/wp-content/uploads/blurred/player-single.jpg');
-  background-size:cover;
-  
-
-  /*-webkit-filter: blur(8px);
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -ms-filter: blur(8px);
-  filter: blur(8px);*/
+  background-size: cover;
 }
 
 .bWidth {
@@ -40,5 +32,3 @@
   color: black;
   border-color: black;
 }
-
-

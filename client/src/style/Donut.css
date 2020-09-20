@@ -33,7 +33,7 @@ span {
   align-items: flex-end;
 }
 
-ul{
+ul {
   width: 95%;
   margin: 0 auto;
   text-align: center;
@@ -53,15 +53,12 @@ img {
   height: 750px;
 }
 
-
 .block {
   margin: 0 auto;
   border-radius: 5px;
   float: left;
   overflow: hidden;
 }
-
-.left-container {}
 
 .menu-box {
   height: 360px;
@@ -115,7 +112,7 @@ img {
   width: 175px;
   height: 175px;
   margin: 0 auto 2rem;
-  border-radius: 100%
+  border-radius: 100%;
 }
 
 p.center-date {
@@ -141,7 +138,7 @@ p.center-date {
 
 .recorte {
   border-radius: 50%;
-  clip: rect(0px, 200px, 200px, 100px);
+  clip: rect(0, 200px, 200px, 100px);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -149,7 +146,7 @@ p.center-date {
 
 .quesito {
   border-radius: 50%;
-  clip: rect(0px, 100px, 200px, 0px);
+  clip: rect(0, 100px, 200px, 0);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -201,7 +198,7 @@ p.center-date {
 }
 
 .nota-final strong {
-  color: #E64C65;
+  color: #e64c65;
 }
 
 .nota-final a {
