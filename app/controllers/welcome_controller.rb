@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   before_action :authenticate_user!, only: [:app]
-  def home
+  def home   
   end
 
   def app

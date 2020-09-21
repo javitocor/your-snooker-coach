@@ -1,4 +1,4 @@
-module Api 
+module Api
   module V1
     class TrainingsController < ApplicationController
       before_action :set_provider, only: [:show]
@@ -6,7 +6,7 @@ module Api
 
       def index
         if user_signed_in?
-          @trainings = current_user.trainings.order("created_at DESC")
+          @trainings = current_user.trainings.order('created_at DESC')
           render json: @trainings
         else
           render json: {}, status: 401
