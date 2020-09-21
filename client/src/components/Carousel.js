@@ -9,16 +9,16 @@ const Carousel1 = props => {
   return (
     <Carousel id="myCarousel" className="carousel slide carousel-fade" data-ride="carousel" interval={5000} controls={false}>
       {playerslist.map((player, index) => (
-        <Carousel.Item key={index + 100}>
+        <Carousel.Item key={player + 100}>
           <CarouselItem index={index} player={player} />
         </Carousel.Item>
       ))}
     </Carousel>
-  )
+  );
 };
 
 Carousel1.propTypes = {
-  playerslist: PropTypes.arrayOf(PropTypes.object),
+  playerslist: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Carousel1;

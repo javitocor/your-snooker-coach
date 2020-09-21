@@ -1,4 +1,8 @@
-import { initialStateTrainings, GET_TRAININGS, GET_TRAININGS_PENDING, GET_TRAININGS_ERROR, CREATE_TRAINING, CREATE_TRAINING_PENDING, CREATE_TRAINING_ERROR  } from '../helpers/constants';
+import {
+  initialStateTrainings,
+  GET_TRAININGS, GET_TRAININGS_PENDING, GET_TRAININGS_ERROR,
+  CREATE_TRAINING, CREATE_TRAINING_PENDING, CREATE_TRAINING_ERROR,
+} from '../helpers/constants';
 
 const trainingsReducer = (state = initialStateTrainings, action) => {
   switch (action.type) {
@@ -19,7 +23,7 @@ const trainingsReducer = (state = initialStateTrainings, action) => {
         pending: false,
         error: action.error,
       };
-      case CREATE_TRAINING:
+    case CREATE_TRAINING:
       return {
         ...state,
         pending: false,

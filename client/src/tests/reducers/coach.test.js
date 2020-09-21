@@ -1,15 +1,14 @@
 import coachReducer from '../../reducers/coach';
 import { initialStatePlayers, GET_ALL_PLAYERS, GET_PLAYER } from '../../helpers/constants';
 
-
 describe('tests for coach reducer', () => {
-  const data = {playersList: ['a', 'a']};
+  const data = { playersList: ['a', 'a'] };
   const result = {
     error: null,
     pending: false,
     player: {},
-    playersList: {playersList: ['a', 'a']}
-  }
+    playersList: { playersList: ['a', 'a'] },
+  };
   const data2 = {
     player: 'player',
   };
@@ -28,7 +27,7 @@ describe('tests for coach reducer', () => {
       player: data2,
     })).toEqual({
       ...initialStatePlayers,
-      player: {player: 'player'},
+      player: { player: 'player' },
     });
   });
 });

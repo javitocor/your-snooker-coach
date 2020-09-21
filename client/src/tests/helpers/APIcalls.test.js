@@ -1,15 +1,18 @@
-import {AllPlayersCall, PlayerCall, TrainingsCall, CreateTrainingsCall} from '../../helpers/APIcalls';
+/* eslint-disable no-unused-vars */
+import {
+  AllPlayersCall, PlayerCall, TrainingsCall, CreateTrainingsCall,
+} from '../../helpers/APIcalls';
 
 jest.mock('../../helpers/APIcalls');
 
-describe('Returns API response',  () =>{
+describe('Returns API response', () => {
   it('returns a player', async () => {
     const player = [
       {
-        name: 'Mark J Williams', 
-        nationality: 'Wales', 
-        born: '1975-03-21', 
-        firstseason: '1992', 
+        name: 'Mark J Williams',
+        nationality: 'Wales',
+        born: '1975-03-21',
+        firstseason: '1992',
         info: `Ranking titles: 22
         Triple Crown wins: Seven (Three World Championship, two UK Championships, two Masters)
         
@@ -25,14 +28,14 @@ describe('Returns API response',  () =>{
         2017: Secures his first ranking event victory in six years at the Northern Ireland Open, beating Yan Bingtao 9-8 in the final
         2018: Wins the German Masters. Wins the World Championship for the third time, beating John Higgins 18-16 in one of the all-time great Crucible  finals. At the age of 43, becomes the oldest winner since Ray Reardon in 1978. Joins Mark Selby and John Spencer on three world titles. Wins the Yushan World Open in China, his 22nd career ranking title.
         
-        `, 
-        image: 'http://snooker.org/img/players/MarkWilliams.png', 
-        ranking: 10, 
-        rate:'$ 154/hr'
-      }
+        `,
+        image: 'http://snooker.org/img/players/MarkWilliams.png',
+        ranking: 10,
+        rate: '$ 154/hr',
+      },
     ];
     PlayerCall.mockResolvedValue({ player });
     const player1 = await PlayerCall(1);
     expect(player1).toEqual({ player });
   });
-})
+});

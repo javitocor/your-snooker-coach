@@ -6,7 +6,6 @@ import ProfileUser from '../containers/ProfileUser';
 import About from './About';
 import NavBar from './NavBar';
 
-
 const App = () => (
   <Router>
     <Switch>
@@ -26,4 +25,3 @@ const App = () => (
 );
 
 export default App;
-

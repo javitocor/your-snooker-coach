@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -10,10 +11,11 @@ import CoachCard from '../components/CoachCard';
 import { PlayerCall, CreateTrainingsCall } from '../helpers/APIcalls';
 
 class ProfileCoach extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.addTraining = this.addTraining.bind(this);
   }
+
   componentDidMount() {
     const { location } = this.props;
     const { playerId } = location.state;
@@ -23,7 +25,7 @@ class ProfileCoach extends React.Component {
 
   addTraining(data) {
     const { postTraining } = this.props;
-    let token = document.querySelector('meta[name="csrf-token"]').content;
+    const token = document.querySelector('meta[name="csrf-token"]').content;
     postTraining(token, data);
   }
 
@@ -42,7 +44,7 @@ class ProfileCoach extends React.Component {
           <div className="col-md-4 col-sm-12 d-flex flex-column">
             <Table key={player} player={player} />
             <Donut />
-            <Modal player={player} addTraining={this.addTraining} />            
+            <Modal player={player} addTraining={this.addTraining} />
           </div>
         </div>
       </div>

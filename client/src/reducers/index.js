@@ -4,7 +4,7 @@ import trainingsReducer from './trainings';
 
 const rootReducer = combineReducers({
   coach: coachReducer,
-  userTrainings: trainingsReducer
+  userTrainings: trainingsReducer,
 });
 
 export default rootReducer;

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { locations } from '../helpers/constants';
 
-
 const dropMenu = locations.map(
   location => <option key={location} value={location}>{location}</option>,
 );

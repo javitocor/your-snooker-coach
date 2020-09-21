@@ -6,8 +6,12 @@ import CarouselItem from '../../components/CarouselItem';
 describe('<CarouselItem />', () => {
   it('Renders <CarouselItem /> component correctly', () => {
     const index = 1;
-    const player = {name: 'a'};
-    const { getByText } = render(<BrowserRouter><CarouselItem index={index} player={player}/></BrowserRouter>);
+    const player = { name: 'a' };
+    const { getByText } = render(
+      <BrowserRouter>
+        <CarouselItem index={index} player={player} />
+      </BrowserRouter>,
+    );
     expect(getByText(/Profesional Since/i)).toBeInTheDocument();
   });
 });

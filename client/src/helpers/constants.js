@@ -8,13 +8,12 @@ export const GET_PLAYER = 'GET_PLAYER';
 export const GET_PLAYER_ERROR = 'GET_PLAYER_ERROR';
 export const GET_PLAYER_PENDING = 'GET_PLAYER_PENDING';
 
-
 export const initialStatePlayers = {
   error: null,
   pending: false,
   playersList: [],
   player: {},
-}
+};
 
 export const GET_TRAININGS = 'GET_TRAININGS';
 export const GET_TRAININGS_PENDING = 'GET_TRAININGS_PENDING';
@@ -28,7 +27,7 @@ export const initialStateTrainings = {
   pending: false,
   trainings: [],
   training: [],
-}
+};
 
 export const locations = [
   'The Crucible Theatre, Sheffield, EN',
@@ -42,6 +41,5 @@ export const locations = [
   'Blackpool Tower, Blackpool, EN',
   'Beijing University, Beijing, CH',
   'Venue Cymru, Llandudno, WAL',
-  'Grand Hyatt Mumbai, Mumbai, IND'
+  'Grand Hyatt Mumbai, Mumbai, IND',
 ];
-

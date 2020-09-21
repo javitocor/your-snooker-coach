@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { TrainingsCall } from '../helpers/APIcalls';
 import Spinner from 'react-bootstrap/Spinner';
+import { TrainingsCall } from '../helpers/APIcalls';
 import '../style/ProfileUser.css';
 
 const ProfileUser = ({ getTrainings, userTrainings }) => {
@@ -36,21 +37,40 @@ const ProfileUser = ({ getTrainings, userTrainings }) => {
           <h5 className="section-title h1 text-center text-success">YOUR TRAININGS</h5>
           <div className="row">
             {trainings.map((training, index) => (
-              <div key={index + 398} className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div key={training + 398} className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div className="image-flip">
                   <div className="mainflip flip-0">
                     <div className="frontside">
                       <div className="card">
                         <div className="card-body text-center">
-                          <p><img className=" img-fluid"
-                            src={training.player.image}
-                            alt="card image" /></p>
-                          <h4 className="card-title">Training {index + 1}</h4>
-                          <p className="card-text">Location: {training.location}</p>
-                          <p className="card-text">Date: {training.date}</p>
-                          <p className="card-text">Coach: {training.player.name}</p>
-                          <a href="#" className="btn btn-success btn-sm"><i
-                            className="fa fa-plus"></i></a>
+                          <p>
+                            <img
+                              className=" img-fluid"
+                              src={training.player.image}
+                              alt="card pic"
+                            />
+                          </p>
+                          <h4 className="card-title">
+                            Training
+                            {index + 1}
+                          </h4>
+                          <p className="card-text">
+                            Location:
+                            {training.location}
+                          </p>
+                          <p className="card-text">
+                            Date:
+                            {training.date}
+                          </p>
+                          <p className="card-text">
+                            Coach:
+                            {training.player.name}
+                          </p>
+                          <a href="#" className="btn btn-success btn-sm">
+                            <i
+                              className="fa fa-plus"
+                            />
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -62,22 +82,22 @@ const ProfileUser = ({ getTrainings, userTrainings }) => {
                           <ul className="list-inline">
                             <li className="list-inline-item">
                               <a className="social-icon text-xs-center" target="_blank" href="#">
-                                <i className="fas fa-battery-full"></i>
+                                <i className="fas fa-battery-full" />
                               </a>
                             </li>
                             <li className="list-inline-item">
                               <a className="social-icon text-xs-center" target="_blank" href="#">
-                                <i className="far fa-check-circle"></i>
+                                <i className="far fa-check-circle" />
                               </a>
                             </li>
                             <li className="list-inline-item">
                               <a className="social-icon text-xs-center" target="_blank" href="#">
-                                <i className="far fa-handshake"></i>
+                                <i className="far fa-handshake" />
                               </a>
                             </li>
                             <li className="list-inline-item">
                               <a className="social-icon text-xs-center" target="_blank" href="#">
-                                <i className="fas fa-calendar-day"></i>
+                                <i className="fas fa-calendar-day" />
                               </a>
                             </li>
                           </ul>
@@ -93,7 +113,7 @@ const ProfileUser = ({ getTrainings, userTrainings }) => {
         </div>
       </section>
     </div>
-  )
+  );
 };
 
 ProfileUser.propTypes = {

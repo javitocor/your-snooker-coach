@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { render, screen } from '../customRender';
-import App from '../../components/App';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
+import { render, screen } from '../customRender';
+import App from '../../components/App';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

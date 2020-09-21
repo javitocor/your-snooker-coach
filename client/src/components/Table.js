@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../style/Table.css';
@@ -13,30 +15,50 @@ const Table = props => {
       <table className="table table-hover table-bordered table-striped mb-0">
         <tbody>
           <tr className="as">
-            <th className="text-center bg-success"><i className="far fa-clock"></i></th>
-            <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> D.O.B:</p> <p className="m-0 text-dark">{player.born}</p></th>
+            <th className="text-center bg-success"><i className="far fa-clock" /></th>
+            <th className="d-flex justify-content-between align-items-center">
+              <p className="m-0 text-dark"> D.O.B:</p>
+              {' '}
+              <p className="m-0 text-dark">{player.born}</p>
+            </th>
           </tr>
           <tr className="as">
-            <th className="text-center bg-success"><i className="fas fa-globe-europe"></i></th>
-            <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Nationality:</p> <p className="m-0 text-dark">{player.nationality}</p></th>
+            <th className="text-center bg-success"><i className="fas fa-globe-europe" /></th>
+            <th className="d-flex justify-content-between align-items-center">
+              <p className="m-0 text-dark"> Nationality:</p>
+              {' '}
+              <p className="m-0 text-dark">{player.nationality}</p>
+            </th>
           </tr>
           <tr className="as">
-            <th className="text-center bg-success"><i className="far fa-star"></i></th>
-            <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Turned Pro:</p> <p className="m-0 text-dark">{player.firstseason}</p></th>
+            <th className="text-center bg-success"><i className="far fa-star" /></th>
+            <th className="d-flex justify-content-between align-items-center">
+              <p className="m-0 text-dark"> Turned Pro:</p>
+              {' '}
+              <p className="m-0 text-dark">{player.firstseason}</p>
+            </th>
           </tr>
           <tr className="as">
-            <th className="text-center bg-success"><i className="fas fa-trophy"></i></th>
-            <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark"> Ranking:</p> <p className="m-0 text-dark">{player.ranking}</p></th>
+            <th className="text-center bg-success"><i className="fas fa-trophy" /></th>
+            <th className="d-flex justify-content-between align-items-center">
+              <p className="m-0 text-dark"> Ranking:</p>
+              {' '}
+              <p className="m-0 text-dark">{player.ranking}</p>
+            </th>
           </tr>
           <tr className="as">
-            <th className="text-center bg-success"><i className="fas fa-dollar-sign"></i></th>
-            <th className="d-flex justify-content-between align-items-center"><p className="m-0 text-dark">   Rate:</p> <p className="m-0 text-dark">{player.rate}</p></th>
+            <th className="text-center bg-success"><i className="fas fa-dollar-sign" /></th>
+            <th className="d-flex justify-content-between align-items-center">
+              <p className="m-0 text-dark">   Rate:</p>
+              {' '}
+              <p className="m-0 text-dark">{player.rate}</p>
+            </th>
           </tr>
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
 Table.propTypes = {
   player: PropTypes.object.isRequired,
