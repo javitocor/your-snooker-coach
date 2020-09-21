@@ -1,6 +1,6 @@
 # rubocop:disable Layout/LineLength
 require 'rails_helper'
-RSpec.describe "post a single training", :type => :request do
+RSpec.describe 'post a single training', :type => :request do
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
   let!(:player) {
     Player.create(id: 1, name: 'Mark J Williams',

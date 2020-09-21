@@ -1,6 +1,6 @@
 # rubocop:disable Layout/LineLength
 require 'rails_helper'
-RSpec.describe "get a single user trainings", :type => :request do
+RSpec.describe 'get a single user trainings', :type => :request do
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
   let!(:player) {
     Player.create(id: 1, name: 'Mark J Williams',
@@ -34,7 +34,7 @@ RSpec.describe "get a single user trainings", :type => :request do
     get '/api/v1/trainings'
   }
 
-  it "returns http success" do
+  it 'returns http success' do
     expect(response).to have_http_status(:success)
   end
 

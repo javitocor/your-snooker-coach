@@ -1,6 +1,6 @@
 # rubocop:disable Layout/LineLength
 require 'rails_helper'
-RSpec.describe "get a single player", :type => :request do
+RSpec.describe 'get a single player', :type => :request do
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
   let!(:player) {
     Player.create(id: 1, name: 'Mark J Williams',
@@ -33,11 +33,11 @@ RSpec.describe "get a single player", :type => :request do
     get '/api/v1/players/1'
   }
 
-  it "returns http success" do
+  it 'returns http success' do
     expect(response).to have_http_status(:success)
   end
 
-  it "JSON body response contains expected player attributes" do
+  it 'JSON body response contains expected player attributes' do
     json_response = JSON.parse(response.body)
     expect(json_response.keys).to match_array(['id', 'name', 'info', 'image', 'ranking', 'rate', 'born', 'firstseason', 'nationality', 'trainings'])
   end
