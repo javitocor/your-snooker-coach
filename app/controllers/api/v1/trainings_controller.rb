@@ -4,8 +4,8 @@ module Api
       before_action :set_provider, only: [:show]
       before_action :authenticate_user!
 
-      def index 
-        if user_signed_in? 
+      def index
+        if user_signed_in?
           @trainings = current_user.trainings.order("created_at DESC")
           render json: @trainings
         else
@@ -13,8 +13,8 @@ module Api
         end
       end
 
-      def create 
-        if user_signed_in? 
+      def create
+        if user_signed_in?
           @training = current_user.trainings.build(training_params)
           if @training && @training.save
             render json: @training, status: :created
@@ -26,11 +26,11 @@ module Api
         end
       end
 
-      def show 
+      def show
         render json: @training
-      end     
+      end
 
-      private 
+      private
 
       def set_provider
         @training = Training.find(params[:id])
@@ -39,8 +39,6 @@ module Api
       def training_params
         params.require(:training).permit(:location, :date, :player_id)
       end
-
     end
-  end 
+  end
 end
-

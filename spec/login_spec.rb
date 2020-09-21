@@ -80,5 +80,5 @@ RSpec.describe 'Login and signup features', type: :feature do
       click_button 'Sign up'
       expect(page).to have_content('Email is invalid')
     end
-  end  
+  end
 end

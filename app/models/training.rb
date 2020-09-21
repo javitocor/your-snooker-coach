@@ -1,3 +1,4 @@
+# rubocop:disable Layout/LineLength
 class Training < ApplicationRecord
   belongs_to :user
   belongs_to :player
@@ -12,3 +13,4 @@ class Training < ApplicationRecord
     errors.add(:date, "Can't book in the past") if date.present? && date < Date.current
   end
 end
+# rubocop:enable Layout/LineLength
