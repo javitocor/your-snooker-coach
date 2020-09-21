@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "get all players route", type: :request do
+RSpec.describe 'get all players route', type: :request do
   let!(:players) { FactoryBot.create_list(:random_player, 20) }
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
 
@@ -17,3 +17,4 @@ RSpec.describe "get all players route", type: :request do
     expect(response).to have_http_status(:success)
   end
 end
+

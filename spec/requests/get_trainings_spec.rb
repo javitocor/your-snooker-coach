@@ -2,7 +2,7 @@
 require 'rails_helper'
 RSpec.describe 'get a single user trainings', type: :request do
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
-  let!(:player) {
+  let!(:player) do
     Player.create(id: 1, name: 'Mark J Williams',
                   nationality: 'Wales',
                   born: '1975-03-21',
@@ -26,7 +26,7 @@ RSpec.describe 'get a single user trainings', type: :request do
                   image: 'http://snooker.org/img/players/MarkWilliams.png',
                   ranking: 10,
                   rate: '$ 154/hr')
-  }
+    end
 
   before do
     sign_in user
