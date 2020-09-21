@@ -1,6 +1,6 @@
 # rubocop:disable Layout/LineLength
 require 'rails_helper'
-RSpec.describe 'get a single player', :type => :request do
+RSpec.describe 'get a single player', type: :request do
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
   let!(:player) {
     Player.create(id: 1, name: 'Mark J Williams',
@@ -28,10 +28,10 @@ RSpec.describe 'get a single player', :type => :request do
                   rate: '$ 154/hr')
   }
 
-  before {
+  before do
     sign_in user
     get '/api/v1/players/1'
-  }
+  end
 
   it 'returns http success' do
     expect(response).to have_http_status(:success)
@@ -39,7 +39,7 @@ RSpec.describe 'get a single player', :type => :request do
 
   it 'JSON body response contains expected player attributes' do
     json_response = JSON.parse(response.body)
-    expect(json_response.keys).to match_array(['id', 'name', 'info', 'image', 'ranking', 'rate', 'born', 'firstseason', 'nationality', 'trainings'])
+    expect(json_response.keys).to match_array(%w[id name info image ranking rate born firstseason nationality trainings])
   end
 
   it 'returns the name' do
@@ -70,4 +70,5 @@ RSpec.describe 'get a single player', :type => :request do
     expect(JSON.parse(response.body)['image']).to eq('http://snooker.org/img/players/MarkWilliams.png')
   end
 end
+
 # rubocop:enable Layout/LineLength

@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "get all players route", :type => :request do
+RSpec.describe "get all players route", type: :request do
   let!(:players) { FactoryBot.create_list(:random_player, 20) }
   let(:user) { User.create(id: '1', username: 'Peter', email: 'peter@example.com', password: 'password') }
 
-  before {
+  before do
     sign_in user
     get '/api/v1/players'
-  }
+  end
 
   it 'returns all players' do
     expect(JSON.parse(response.body).size).to eq(20)

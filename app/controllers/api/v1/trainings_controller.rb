@@ -16,7 +16,7 @@ module Api
       def create
         if user_signed_in?
           @training = current_user.trainings.build(training_params)
-          if @training && @training.save
+          if @training&.save
             render json: @training, status: :created
           else
             render json: { message: @training.errors.full_messages }, status: 400

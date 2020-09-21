@@ -15,7 +15,7 @@ module Api
       def create
         if user_signed_in?
           @player = Player.create(player_params)
-          if @player && @player.save
+          if @player&.save
             render json: @player, status: :create
           else
             render json: { message: @player.errors.full_messages }, status: 400
