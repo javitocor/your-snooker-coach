@@ -26,7 +26,7 @@ RSpec.describe 'get a single user trainings', type: :request do
                   image: 'http://snooker.org/img/players/MarkWilliams.png',
                   ranking: 10,
                   rate: '$ 154/hr')
-    end
+  end
 
   before do
     sign_in user
