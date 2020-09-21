@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 require 'capybara/rspec'
 RSpec.describe 'Login and signup features', type: :feature do
@@ -82,3 +83,4 @@ RSpec.describe 'Login and signup features', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
