@@ -1,0 +1,327 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.turbolinks-progress-bar {
+  background-color: #28a745;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 1) !important;
+  opacity: 1;
+  height: 100vh;
+}
+
+#error_explanation h2 {
+  font-size: 0.8rem;
+  color: red;
+  background-color: #28a745;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+#error_explanation ul {
+  margin-bottom: 0 !important;
+}
+
+#error_explanation ul li {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.alert-danger {
+  margin-bottom: 5px !important;
+  font-size: 14px !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.bodyCard {
+  padding-top: 0 !important;
+}
+
+.alert1 {
+  background-color: red;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 56px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: none;
+}
+
+.notice {
+  display: none;
+  background-color: #28a745;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 56px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+a {
+  transition: 0.5s;
+  color: #28a745;
+}
+
+.btn2 {
+  background-color: #28a745;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 50px;
+}
+
+.btn2:hover {
+  background-color: #0d5f20;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn2:focus {
+  color: #fff;
+}
+
+.hero {
+  display: table;
+  position: relative;
+  background-image: url('https://i.pinimg.com/originals/7c/9c/a0/7c9ca0b9b6580f806f1c2c9ce6a114fb.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero::after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-top: 60px !important;
+}
+
+.hero-brand {
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
+.hero-brand:hover {
+  opacity: 0.75;
+}
+
+.hero-brand img {
+  width: 20%;
+  height: 20%;
+  opacity: 0.4;
+}
+
+.tagline {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  margin: 45px 0 75px 0;
+  color: #fff;
+}
+
+@media (max-width: 61.9em) {
+  section {
+    .hero {
+      padding: 75px 0;
+    }
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.cont {
+  background-image: url('https://wst.tv/wp-content/uploads/2020/02/49512008927_0e5e3140f7_o.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #464646;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+  padding-top: 95px;
+}
+
+.card {
+  height: 370px;
+  margin: 5rem auto !important;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.social_icon span {
+  font-size: 60px;
+  margin-left: 10px;
+  color: #28a745;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #28a745;
+  color: black;
+  border: 0 !important;
+}
+
+.social_icon span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card-header h3 {
+  color: white;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  color: black !important;
+  background-color: #28a745 !important;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.login_btn2 {
+  color: black !important;
+  background-color: #28a745 !important;
+  width: 200px;
+}
+
+.login_btn2:hover {
+  color: black;
+  background-color: white;
+}
+
+.links {
+  color: white;
+}
+
+.links a {
+  margin-left: 4px;
+}
+
+.myHead {
+  background-color: black;
+  color: #28a745;
+  height: 50px;
+}
+
+.myFoot div a {
+  color: #28a745;
+}
+
+#navbarSupportedContent ul li a {
+  color: #28a745;
+}
+
+.myFoot {
+  background-color: black;
+  display: none;
+}

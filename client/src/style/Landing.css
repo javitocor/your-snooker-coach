@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100vh;
+}
+
+.content {
+  overflow: auto;
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('https://wst.tv/wp-content/uploads/blurred/news-single-2000x1222.jpg');
+  background-size: cover;
+}
+
+.title {
+  color: white;
+  font-size: 38px;
+  font-stretch: 100%;
+  font-weight: 800;
+  line-height: 53px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  margin-bottom: 47px;
+}

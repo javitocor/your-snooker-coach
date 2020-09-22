@@ -1,0 +1,11 @@
+.image img {
+  width: 100%;
+  height: 15%;
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 768px) {
+  .image img {
+    display: none;
+  }
+}
